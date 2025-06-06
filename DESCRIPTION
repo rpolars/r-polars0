@@ -1,0 +1,124 @@
+Package: polars
+Title: Lightning-Fast 'DataFrame' Library
+Version: 0.22.3.9000
+Depends: R (>= 4.2)
+Imports: utils, codetools, methods
+Authors@R:
+  c(person("Ritchie", "Vink", , "ritchie46@gmail.com", role = c("aut")),
+    person("Soren", "Welling", , "sorhawell@gmail.com", role = c("aut")),
+    person("Tatsuya", "Shima", , "ts1s1andn@gmail.com", role = c("aut", "cre")),
+    person("Etienne", "Bacher", , "etienne.bacher@protonmail.com", role = c("aut"), comment = c(ORCID = "0000-0002-9271-5075")))
+Description: Lightning-fast 'DataFrame' library written in 'Rust'. Convert R data
+  to 'Polars' data and vice versa. Perform fast, lazy, larger-than-memory and
+  optimized data queries. 'Polars' is interoperable with the package 'arrow',
+  as both are based on the 'Apache Arrow' Columnar Format.
+License: MIT + file LICENSE
+Language: en-US
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.3.2
+SystemRequirements: Cargo (rustc package manager), cmake
+URL: https://pola-rs.github.io/r-polars/,
+    https://github.com/pola-rs/r-polars,
+    https://rpolars.r-universe.dev/polars
+Suggests:
+    arrow (>= 15.0.1),
+    bench,
+    bit64,
+    callr,
+    clock (>= 0.7.0),
+    curl,
+    ggplot2,
+    jsonlite,
+    knitr (>= 1.49.0),
+    lubridate,
+    nanoarrow (>= 0.6.0),
+    nycflights13,
+    patrick (>= 0.3.0),
+    quickcheck,
+    pillar,
+    rlang,
+    rmarkdown,
+    testthat (>= 3.2.1),
+    tibble,
+    tools,
+    vctrs,
+    withr,
+    xfun (>= 0.48)
+Config/Needs/website:
+    altdoc,
+    future.apply,
+    here,
+    magrittr,
+    pkgload,
+    yaml
+Config/Needs/dev:
+    devtools,
+    dplyr,
+    RcppTOML,
+    readr,
+    rextendr,
+    spelling,
+    stringr,
+    styler
+Config/testthat/edition: 3
+Collate:
+    'utils.R'
+    'extendr-wrappers.R'
+    'after-wrappers.R'
+    'Field.R'
+    'PTime.R'
+    'as_polars.R'
+    'autocompletion.R'
+    'construction.R'
+    'dataframe__frame.R'
+    'datatype.R'
+    'docs.R'
+    'dotdotdot.R'
+    'error__rpolarserr.R'
+    'error__string.R'
+    'error__trait.R'
+    'error_conversion.R'
+    'expr__array.R'
+    'expr__binary.R'
+    'expr__categorical.R'
+    'expr__datetime.R'
+    'expr__expr.R'
+    'expr__list.R'
+    'expr__meta.R'
+    'expr__name.R'
+    'expr__string.R'
+    'expr__struct.R'
+    'functions__eager.R'
+    'functions__lazy.R'
+    'functions__whenthen.R'
+    'group_by.R'
+    'group_by_dynamic.R'
+    'group_by_rolling.R'
+    'io_csv.R'
+    'io_ipc.R'
+    'io_json.R'
+    'io_parquet.R'
+    'is_polars.R'
+    'lazyframe__group_by.R'
+    'lazyframe__lazy.R'
+    'parse_as_duration.R'
+    'pkg-arrow.R'
+    'pkg-knitr.R'
+    'pkg-nanoarrow.R'
+    'polars-package.R'
+    'polars_envvars.R'
+    'polars_info.R'
+    'polars_options.R'
+    'rbackground.R'
+    'rust_result.R'
+    's3-methods.R'
+    's3-methods-operator.R'
+    'series__series.R'
+    'sql.R'
+    'vctrs.R'
+    'zzz.R'
+Config/rextendr/version: 0.3.1
+VignetteBuilder: knitr
+Config/polars/LibVersion: 0.45.2
+Config/polars/RustToolchainVersion: nightly-2024-11-28

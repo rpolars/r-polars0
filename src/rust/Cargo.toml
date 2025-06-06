@@ -1,0 +1,164 @@
+[package]
+name = "r-polars"
+version = "0.45.2"
+edition = "2021"
+rust-version = "1.82.0"
+publish = false
+
+[lib]
+crate-type = ['staticlib', 'rlib']
+
+[features]
+default = ["sql"]
+full_features = ["default", "nightly", "disable_limit_max_threads"]
+disable_limit_max_threads = []
+sql = ["polars/sql"]
+# also includes simd, requires nightly
+nightly = ["polars/nightly"]
+
+rpolars_debug_print = []
+
+[target.'cfg(all(any(not(target_family = "unix"), allocator = "mimalloc")))'.dependencies]
+mimalloc = { version = "0.1", default-features = false }
+
+[target.'cfg(all(target_family = "unix", not(allocator = "mimalloc")))'.dependencies]
+jemallocator = { version = "0.5", features = ["disable_initial_exec_tls"] }
+
+[profile.release-optimized]
+inherits = "release"
+codegen-units = 1
+lto = "fat"
+strip = true
+
+[profile.release.package.argminmax]
+opt-level = 3 # was 1 to support 1.66, but since 1.70 is needed anyway it does not matter anymore
+[profile.release-optimized.package.argminmax]
+opt-level = 3
+
+[dependencies]
+extendr-api = { git = "https://github.com/rpolars/extendr", rev = "53bc326c5cdb4ac8684219d283d0ad21450072c1", default-features = false, features = [
+  "result_list",
+  "serde",
+] }
+flume = "0.11.1"
+indenter = "0.3.3"
+ipc-channel = "0.18.3"
+once_cell = "1.21.3"
+rayon = "1.10.0"
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "*"
+smartstring = "1.0.1"
+state = "0.6.0"
+thiserror = "2.0.12"
+polars-core = { git = "https://github.com/pola-rs/polars.git", rev = "e83e7d47cda3475b84a7add7838d349779143cc7", default-features = false }
+polars-lazy = { git = "https://github.com/pola-rs/polars.git", rev = "e83e7d47cda3475b84a7add7838d349779143cc7", default-features = false }
+either = "1"
+
+[dependencies.polars]
+features = [
+  "abs",
+  "approx_unique",
+  "array_any_all",
+  "array_count",
+  "array_to_struct",
+  "arg_where",
+  "asof_join",
+  "avro",
+  "aws",
+  "azure",
+  "binary_encoding",
+  "cloud",
+  "concat_str",
+  "cov",
+  "cross_join",
+  "cse",
+  "cum_agg",
+  "cumulative_eval",
+  "cutqcut",
+  "dataframe_arithmetic",
+  "decompress-fast",
+  "diagonal_concat",
+  "diff",
+  "dot_diagram",
+  "dot_product",
+  "dtype-array",
+  "dtype-categorical",
+  "dtype-date",
+  "dtype-datetime",
+  "dtype-duration",
+  "dtype-full",
+  "dtype-time",
+  "dynamic_group_by",
+  "extract_groups",
+  "extract_jsonpath",
+  "ewma",
+  "ewma_by",
+  "find_many",
+  "fmt",
+  "gcp",
+  "http",
+  "iejoin",
+  "interpolate",
+  "ipc",
+  "is_between",
+  "is_first_distinct",
+  "is_last_distinct",
+  "is_in",
+  "is_unique",
+  "json",
+  "lazy",
+  "list_any_all",
+  "list_eval",
+  "list_gather",
+  "list_sample",
+  "list_sets",
+  "list_to_struct",
+  "log",
+  "meta",
+  "mode",
+  "moment",
+  "month_start",
+  "month_end",
+  "ndarray",
+  "object",
+  "offset_by",
+  "parquet",
+  "partition_by",
+  "pct_change",
+  "peaks",
+  "performant",
+  "pivot",
+  "product",
+  "propagate_nans",
+  "random",
+  "range",
+  "rank",
+  "reinterpret",
+  "repeat_by",
+  "replace",
+  "rle",
+  "rolling_window",
+  "rolling_window_by",
+  "round_series",
+  "row_hash",
+  "rows",
+  "semi_anti_join",
+  "search_sorted",
+  "serde-lazy",
+  "sign",
+  "strings",
+  "string_encoding",
+  "string_pad",
+  "string_reverse",
+  "string_to_integer",
+  "temporal",
+  "timezones",
+  "to_dummies",
+  "top_k",
+  "trigonometry",
+  "true_div",
+  "unique_counts",
+  "zip_with",
+]
+git = "https://github.com/pola-rs/polars.git"
+rev = "e83e7d47cda3475b84a7add7838d349779143cc7"

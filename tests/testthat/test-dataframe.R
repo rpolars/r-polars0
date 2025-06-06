@@ -1,0 +1,1836 @@
+expected_iris_select_df = structure(list(miah = c(
+  171.4, 171.4, 171.4, 171.4, 171.4, 171.4,
+  171.4, 171.4, 171.4, 171.4, 171.4, 171.4, 171.4, 171.4, 171.4,
+  171.4, 171.4, 171.4, 171.4, 171.4, 171.4, 171.4, 171.4, 171.4,
+  171.4, 171.4, 171.4, 171.4, 171.4, 171.4, 171.4, 171.4, 171.4,
+  171.4, 171.4, 171.4, 171.4, 171.4, 171.4, 171.4, 171.4, 171.4,
+  171.4, 171.4, 171.4, 171.4, 171.4, 171.4, 171.4, 171.4, 138.5,
+  138.5, 138.5, 138.5, 138.5, 138.5, 138.5, 138.5, 138.5, 138.5,
+  138.5, 138.5, 138.5, 138.5, 138.5, 138.5, 138.5, 138.5, 138.5,
+  138.5, 138.5, 138.5, 138.5, 138.5, 138.5, 138.5, 138.5, 138.5,
+  138.5, 138.5, 138.5, 138.5, 138.5, 138.5, 138.5, 138.5, 138.5,
+  138.5, 138.5, 138.5, 138.5, 138.5, 138.5, 138.5, 138.5, 138.5,
+  138.5, 138.5, 138.5, 138.5, 148.7, 148.7, 148.7, 148.7, 148.7,
+  148.7, 148.7, 148.7, 148.7, 148.7, 148.7, 148.7, 148.7, 148.7,
+  148.7, 148.7, 148.7, 148.7, 148.7, 148.7, 148.7, 148.7, 148.7,
+  148.7, 148.7, 148.7, 148.7, 148.7, 148.7, 148.7, 148.7, 148.7,
+  148.7, 148.7, 148.7, 148.7, 148.7, 148.7, 148.7, 148.7, 148.7,
+  148.7, 148.7, 148.7, 148.7, 148.7, 148.7, 148.7, 148.7, 148.7
+), miah2 = c(
+  250.3, 250.3, 250.3, 250.3, 250.3, 250.3, 250.3,
+  250.3, 250.3, 250.3, 250.3, 250.3, 250.3, 250.3, 250.3, 250.3,
+  250.3, 250.3, 250.3, 250.3, 250.3, 250.3, 250.3, 250.3, 250.3,
+  250.3, 250.3, 250.3, 250.3, 250.3, 250.3, 250.3, 250.3, 250.3,
+  250.3, 250.3, 250.3, 250.3, 250.3, 250.3, 250.3, 250.3, 250.3,
+  250.3, 250.3, 250.3, 250.3, 250.3, 250.3, 250.3, 296.8, 296.8,
+  296.8, 296.8, 296.8, 296.8, 296.8, 296.8, 296.8, 296.8, 296.8,
+  296.8, 296.8, 296.8, 296.8, 296.8, 296.8, 296.8, 296.8, 296.8,
+  296.8, 296.8, 296.8, 296.8, 296.8, 296.8, 296.8, 296.8, 296.8,
+  296.8, 296.8, 296.8, 296.8, 296.8, 296.8, 296.8, 296.8, 296.8,
+  296.8, 296.8, 296.8, 296.8, 296.8, 296.8, 296.8, 296.8, 296.8,
+  296.8, 296.8, 296.8, 329.4, 329.4, 329.4, 329.4, 329.4, 329.4,
+  329.4, 329.4, 329.4, 329.4, 329.4, 329.4, 329.4, 329.4, 329.4,
+  329.4, 329.4, 329.4, 329.4, 329.4, 329.4, 329.4, 329.4, 329.4,
+  329.4, 329.4, 329.4, 329.4, 329.4, 329.4, 329.4, 329.4, 329.4,
+  329.4, 329.4, 329.4, 329.4, 329.4, 329.4, 329.4, 329.4, 329.4,
+  329.4, 329.4, 329.4, 329.4, 329.4, 329.4, 329.4, 329.4
+), Petal.Length = c(
+  1.4,
+  1.4, 1.3, 1.5, 1.4, 1.7, 1.4, 1.5, 1.4, 1.5, 1.5, 1.6, 1.4, 1.1,
+  1.2, 1.5, 1.3, 1.4, 1.7, 1.5, 1.7, 1.5, 1, 1.7, 1.9, 1.6, 1.6,
+  1.5, 1.4, 1.6, 1.6, 1.5, 1.5, 1.4, 1.5, 1.2, 1.3, 1.4, 1.3, 1.5,
+  1.3, 1.3, 1.3, 1.6, 1.9, 1.4, 1.6, 1.4, 1.5, 1.4, 4.7, 4.5, 4.9,
+  4, 4.6, 4.5, 4.7, 3.3, 4.6, 3.9, 3.5, 4.2, 4, 4.7, 3.6, 4.4,
+  4.5, 4.1, 4.5, 3.9, 4.8, 4, 4.9, 4.7, 4.3, 4.4, 4.8, 5, 4.5,
+  3.5, 3.8, 3.7, 3.9, 5.1, 4.5, 4.5, 4.7, 4.4, 4.1, 4, 4.4, 4.6,
+  4, 3.3, 4.2, 4.2, 4.2, 4.3, 3, 4.1, 6, 5.1, 5.9, 5.6, 5.8, 6.6,
+  4.5, 6.3, 5.8, 6.1, 5.1, 5.3, 5.5, 5, 5.1, 5.3, 5.5, 6.7, 6.9,
+  5, 5.7, 4.9, 6.7, 4.9, 5.7, 6, 4.8, 4.9, 5.6, 5.8, 6.1, 6.4,
+  5.6, 5.1, 5.6, 6.1, 5.6, 5.5, 4.8, 5.4, 5.6, 5.1, 5.1, 5.9, 5.7,
+  5.2, 5, 5.2, 5.4, 5.1
+)), class = "data.frame", row.names = c(
+  NA,
+  -150L
+))
+
+patrick::with_parameters_test_that("DataFrame, mixed input, create and print",
+  {
+    input_vectors_and_series = list(
+      newname = as_polars_series(c(1, 2, 3, 4, 5), name = "b"), # overwrite name b with newname
+      as_polars_series((1:5) * 5, "a"),
+      as_polars_series(letters[1:5], "b"),
+      c(5, 4, 3, 2, 1), # unnamed vector
+      named_vector = c(15, 14, 13, 12, 11), # named provide
+      c(5, 4, 3, 2, 0)
+    )
+
+    # clone into DataFrame and change one name
+    df = pl$DataFrame(input_vectors_and_series)
+    .env_var = .value
+    names(.env_var) = .name
+    withr::with_envvar(.env_var, expect_snapshot(df))
+  },
+  .cases = make_print_cases()
+)
+
+test_that("DataFrame, input free vectors, input empty", {
+  # passing vector directly is equal to passing one
+  l = as.list(iris)
+  df1 = pl$DataFrame(l)
+  df2 = do.call(pl$DataFrame, l)
+  expect_identical(
+    df1$to_list(), df2$to_list()
+  )
+  df_e = pl$DataFrame()
+  expect_s3_class(df_e, "RPolarsDataFrame")
+  expect_identical(df_e$shape, c(0, 0))
+  expect_identical(pl$DataFrame()$to_list(), .pr$DataFrame$default()$to_list())
+})
+
+test_that("get set properties", {
+  df = pl$DataFrame(list(a = 1:5, b = rep(TRUE, 5)))
+
+  expect_equal(
+    df$columns,
+    c("a", "b")
+  )
+
+  df2 = df
+  df2$columns = c("alice", "bob")
+
+  expect_equal(
+    df2$columns,
+    c("alice", "bob")
+  )
+
+  # immutable by default see strictly_immutable option
+  expect_different(df2$columns, df$columns)
+
+  # cannot set property without setter method
+  expect_grepl_error(df$height <- 10)
+
+  # other getable properties
+  expect_equal(df$height, 5L)
+  expect_equal(df$width, 2L)
+  expect_equal(df$shape, c(5L, 2L))
+
+  # dtypes from object are as expected
+  expect_true(
+    all(mapply(
+      df$dtypes,
+      pl$dtypes[c("Int32", "Boolean")],
+      FUN = "=="
+    ))
+  )
+  expect_null(names(df$dtypes))
+
+  expect_true(
+    all(mapply(
+      df$schema,
+      pl$dtypes[c("Int32", "Boolean")],
+      FUN = "=="
+    ))
+  )
+
+  expect_named(df$schema, df$columns)
+})
+
+
+test_that("DataFrame, custom schema", {
+  df = suppressWarnings(pl$DataFrame(
+    iris,
+    schema = list(Sepal.Length = pl$Float32, Species = pl$String)
+  ))
+  # dtypes from object are as expected
+  expect_true(
+    all(mapply(
+      df$dtypes,
+      pl$dtypes[c("Float32", rep("Float64", 3), "String")],
+      FUN = "=="
+    ))
+  )
+  expect_named(df$schema, names(iris))
+
+  # works fine if a variable is called "schema"
+  expect_no_error(
+    pl$DataFrame(list(schema = 1), schema = list(schema = pl$Float32))
+  )
+  # incorrect datatype
+  expect_grepl_error(pl$DataFrame(x = 1, schema = list(schema = foo)))
+  expect_grepl_error(
+    pl$DataFrame(x = 1, schema = list(x = "foo")),
+    "expected RPolarsDataType"
+  )
+
+  # wrong variable name in schema
+  expect_grepl_error(
+    pl$DataFrame(x = 1, schema = list(schema = pl$Float32)),
+    "Some columns in `schema` are not in the DataFrame"
+  )
+})
+
+test_that("construct an empty DataFrame with schema only", {
+  df = pl$select(
+    int = 1L,
+    string = pl$lit("a"),
+    list = list(1),
+    struct = data.frame(a = 1L, b = "a"),
+    datetime = as.POSIXct("2021-01-01 00:00:00", tz = "UTC")
+  )
+  expected_dtypes = df$dtypes
+
+  df_out = pl$DataFrame(
+    schema = df$schema
+  )
+
+  expect_identical(df_out$shape, c(0, 5))
+  expect_true(mapply(`==`, df_out$dtypes, expected_dtypes) |> all())
+})
+
+test_that("DataFrame, select sum over", {
+  df = as_polars_df(iris)$select(
+    pl$col("Sepal.Width")$sum()$over("Species")$alias("miah"),
+    pl$col("Sepal.Length")$sum()$over("Species")$alias("miah2"),
+    "Petal.Length"
+  )
+
+  expect_equal(
+    df$to_data_frame(),
+    expected_iris_select_df
+  )
+
+  expect_equal(
+    as.data.frame(df),
+    expected_iris_select_df
+  )
+})
+
+test_that("Select with p$col", {
+  x = as_polars_df(mtcars)$select(pl$col("mpg", "hp"))
+  y = as_polars_df(mtcars)$select(pl$col(c("mpg", "hp")))
+  z = as_polars_df(mtcars)$select(pl$col("mpg"), pl$col("hp"))
+  expect_equal(x$columns, c("mpg", "hp"))
+  expect_equal(y$columns, c("mpg", "hp"))
+  expect_equal(z$columns, c("mpg", "hp"))
+})
+
+
+patrick::with_parameters_test_that("select with list of exprs", {
+  expect_equal(
+    as_polars_df(mtcars)$select(expr)$columns,
+    c("mpg", "hp")
+  )
+},
+  expr = list(
+    list(pl$col("mpg"), pl$col("hp")),
+    list(pl$col("mpg", "hp")),
+    list(c("mpg", "hp")),
+    list("mpg", "hp")
+  ),
+  type = c(
+    "list of exprs",
+    "expr",
+    "character",
+    "list of character"
+  ),
+  .test_name = type
+)
+
+patrick::with_parameters_test_that("select_seq with list of exprs", {
+  expect_equal(
+    as_polars_df(mtcars)$select_seq(expr)$columns,
+    c("mpg", "hp")
+  )
+},
+expr = list(
+  list(pl$col("mpg"), pl$col("hp")),
+  list(pl$col("mpg", "hp")),
+  list(c("mpg", "hp")),
+  list("mpg", "hp")
+),
+type = c(
+  "list of exprs",
+  "expr",
+  "character",
+  "list of character"
+),
+.test_name = type
+)
+
+
+test_that("select: create a list variable", {
+  test = pl$DataFrame(x = 1:2)
+
+  # create one column
+  expect_identical(
+    test$select(y = list(1:2, 3:4))$to_list(),
+    list(y = list(1:2, 3:4))
+  )
+
+  # create several column
+  expect_identical(
+    test$select(y = list(1:2, 3:4), z = list(c("a", "b"), c("c", "d")))$to_list(),
+    list(y = list(1:2, 3:4), z = list(c("a", "b"), c("c", "d")))
+  )
+})
+
+test_that("map_batches unity", {
+  x = as_polars_df(iris)$
+    select(
+    pl$col("Sepal.Length")$
+      map_batches(\(s) s)
+  )$
+    to_data_frame()[, 1, drop = FALSE]
+
+  # float is preserved
+  expect_identical(
+    x,
+    iris[, 1, drop = FALSE]
+  )
+
+  # int is preseved
+  int_iris = iris
+  int_iris[, 1:4] = lapply(iris[, 1:4], as.integer)
+  x = as_polars_df(int_iris)$
+    select(
+    pl$col("Sepal.Length")$
+      map_batches(\(s) s)
+  )$
+    to_data_frame()[, 1, drop = FALSE]
+
+  expect_identical(
+    x,
+    int_iris[, 1, drop = FALSE]
+  )
+
+  # drop the dataframe structure
+  x = as_polars_df(iris)$
+    select(
+    pl$col("Species")$
+      map_batches(\(s) s)
+  )$
+    to_data_frame()[, 1]
+
+  expect_different(x, iris[, 1, drop = FALSE])
+
+
+  x = as_polars_df(iris)$
+    select(
+    pl$col("Species")$
+      map_batches(\(s) s)
+  )$
+    to_data_frame()
+  expect_identical(x, iris[, 5, drop = FALSE])
+})
+
+
+test_that("map_batches type", {
+  int_iris = iris
+  int_iris[] = lapply(iris, as.integer)
+
+  # auto new type allowed if return is R vector
+  x = as_polars_df(iris)$
+    select(
+    pl$col("Sepal.Length")$
+      map_batches(\(s) {
+      as.integer(s$to_r()) # ok to return R vector also, will be
+      # converted back to series named ""
+    })$
+      map_batches(\(s) s * 25L)$
+      map_batches(\(s) s / 4)
+  )$
+    to_data_frame()[, 1, drop = FALSE]
+
+  expect_identical(x, int_iris[, 1, drop = FALSE] * 25L / 4L)
+})
+
+test_that("cloning", {
+  pf = as_polars_df(iris)
+
+  # shallow copy, same external pointer
+  pf2 = suppressWarnings(pl$DataFrame(pf))
+  expect_identical(pf, pf2)
+  expect_identical(pl$mem_address(pf), pl$mem_address(pf2))
+
+  # deep copy clone rust side object, hence not same mem address
+  pf3 = pf$clone()
+  expect_identical(pf$to_data_frame(), pf3$to_data_frame())
+  expect_different(pl$mem_address(pf), pl$mem_address(pf3))
+})
+
+test_that("cloning to avoid giving attributes to original data", {
+  df1 = as_polars_df(iris)
+
+  give_attr = function(data) {
+    attr(data, "created_on") = "2024-01-29"
+    data
+  }
+  df2 = give_attr(df1)
+  expect_identical(attributes(df1)$created_on, "2024-01-29")
+
+  give_attr2 = function(data) {
+    data = data$clone()
+    attr(data, "created_on") = "2024-01-29"
+    data
+  }
+  df1 = as_polars_df(iris)
+  df2 = give_attr2(df1)
+  expect_null(attributes(df1)$created_on)
+})
+
+test_that("get column(s)", {
+  df = as_polars_df(iris)
+  expected_list_of_series = {
+    expected = lapply(
+      1:5,
+      function(i) as_polars_series(iris[[i]], names(iris)[i])
+    )
+    names(expected) = names(iris)
+    expected
+  }
+  actual_list_of_series = df$get_columns()
+  for (i in 1:5) {
+    is_equal = expected_list_of_series[[i]]$equals(actual_list_of_series[[i]])
+    if (!is_equal) {
+      fail("series are not equal according to polars internal check")
+    }
+  }
+
+  list_of_vectors = lapply(actual_list_of_series, function(x) x$to_vector())
+  expect_identical(
+    list_of_vectors,
+    unname(as.list(iris))
+  )
+})
+
+
+test_that("get column", {
+  expect_true(
+    as_polars_df(iris)$get_column("Sepal.Length")$equals(
+      as_polars_series(iris$Sepal.Length, "Sepal.Length")
+    )
+  )
+
+  expect_grepl_error(
+    as_polars_df(iris)$get_column("wrong_name")
+  )
+})
+
+test_that("with_columns: list or unlisted input", {
+  test = as_polars_df(mtcars)
+
+  # one element in $with_columns()
+  expect_identical(
+    test$with_columns(list(a = mtcars$drat))$to_data_frame(),
+    test$with_columns(a = mtcars$drat)$to_data_frame()
+  )
+
+  # several elements
+  expect_identical(
+    test$with_columns(list(a = 1, b = mtcars$drat))$to_data_frame(),
+    test$with_columns(a = 1, b = mtcars$drat)$to_data_frame()
+  )
+})
+
+test_that("with_columns: create a list variable", {
+  test = pl$DataFrame(x = 1:2)
+
+  # create one column
+  expect_identical(
+    test$with_columns(y = list(1:2, 3:4))$to_list(),
+    list(x = 1:2, y = list(1:2, 3:4))
+  )
+
+  # create several column
+  expect_identical(
+    test$with_columns(y = list(1:2, 3:4), z = list(c("a", "b"), c("c", "d")))$to_list(),
+    list(x = 1:2, y = list(1:2, 3:4), z = list(c("a", "b"), c("c", "d")))
+  )
+})
+
+test_that("with_columns lazy/eager", {
+  l = list(
+    a = 1:4,
+    b = c(0.5, 4, 10, 13),
+    c = c(TRUE, TRUE, FALSE, TRUE)
+  )
+  df = pl$DataFrame(l)
+  ldf = df$lazy()
+
+  df_actual = df$with_columns(
+    (pl$col("a") * 2)$alias("a*2"),
+    (pl$col("b") / 2)$alias("b/2"),
+    (!pl$col("c"))$alias("not c")
+  )
+  ldf_actual = ldf$with_columns(
+    (pl$col("a") * 2)$alias("a*2"),
+    (pl$col("b") / 2)$alias("b/2"),
+    (!pl$col("c"))$alias("not c")
+  )
+
+  rdf = list2DF(l)
+  rdf$`a*2` = rdf$a * 2
+  rdf$`b/2` = rdf$b / 2
+  rdf$`not c` = !rdf$c
+
+  expect_identical(
+    df_actual$to_data_frame(check.names = FALSE),
+    rdf
+  )
+
+  expect_identical(
+    ldf_actual$collect()$to_data_frame(check.names = FALSE),
+    rdf
+  )
+
+  # check
+  ldf_actual_kwarg_named = ldf$with_columns(
+    "a*2" = (pl$col("a") * 2),
+    "b/2" = (pl$col("b") / 2),
+    "not c" = (!pl$col("c"))
+  )
+
+  expect_identical(
+    ldf_actual_kwarg_named$collect()$to_data_frame(check.names = FALSE),
+    rdf
+  )
+})
+
+test_that("with_columns_seq", {
+  test = pl$DataFrame(x = 1:2)
+
+  # create one column
+  expect_identical(
+    test$with_columns_seq(y = list(1:2, 3:4))$to_list(),
+    list(x = 1:2, y = list(1:2, 3:4))
+  )
+
+  # create several column
+  expect_identical(
+    test$with_columns_seq(y = list(1:2, 3:4), z = list(c("a", "b"), c("c", "d")))$to_list(),
+    list(x = 1:2, y = list(1:2, 3:4), z = list(c("a", "b"), c("c", "d")))
+  )
+})
+
+
+test_that("head lazy/eager", {
+  l = list(
+    a = 1:4,
+    b = c(0.5, 4, 10, 13),
+    c = c(TRUE, TRUE, FALSE, TRUE)
+  )
+  df = pl$DataFrame(l)
+  ldf = df$lazy()
+  rdf = df$to_data_frame()
+
+  expect_identical(
+    df$head(2)$to_data_frame(),
+    head(rdf, 2)
+  )
+
+  expect_identical(
+    ldf$head(2)$collect()$to_data_frame(),
+    head(rdf, 2)
+  )
+
+  expect_identical(
+    df$head(-1)$to_data_frame(),
+    head(rdf, -1)
+  )
+
+  # lazy bounds
+  expect_identical(df$head(0)$to_data_frame(), rdf[integer(), ])
+  expect_grepl_error(ldf$head(-1))
+  expect_grepl_error(ldf$head(2^32))
+  expect_identical(ldf$head(2^32 - 1)$collect()$to_data_frame(), rdf)
+
+  # eager bounds
+  expect_identical(ldf$head(0)$collect()$to_data_frame(), rdf[integer(), ])
+  expect_grepl_error(df$head(2^32))
+  expect_identical(df$head(2^32 - 1)$to_data_frame(), rdf)
+})
+
+
+
+test_that("to_Struct, unnest, to_frame, to_data_frame", {
+  # round-trip conversion from DataFrame with two columns
+  df = pl$DataFrame(
+    a = 1:5,
+    b = c("one", "two", "three", "four", "five"),
+    c = TRUE,
+    d = 42.0,
+    e = NaN,
+    f = NA_real_
+  )
+  s = df$to_struct()
+  df_s = s$to_frame() # place series in a new DataFrame
+
+  expect_identical(df$to_list(), df_s$unnest()$to_list())
+  expect_identical(df$to_list(), df_s$to_list(unnest_structs = TRUE)[[1L]])
+
+  # tedious way to unnest a data.frame of one column struct
+  df_e = as.data.frame(do.call(rbind, df_s$to_data_frame()[[1L]])) |>
+    lapply(unlist) |>
+    as.data.frame()
+  expect_identical(df$to_data_frame(), df_e)
+})
+
+test_that("conversion of datatype Null to R works", {
+  df = pl$DataFrame(x = NULL)
+  expect_identical(
+    df$to_data_frame(),
+    data.frame(x = NA)
+  )
+
+  df2 = pl$DataFrame(x = 1:2, y = NULL)
+  expect_identical(
+    df2$to_data_frame(),
+    data.frame(x = 1:2, y = c(NA, NA))
+  )
+  expect_identical(
+    as.data.frame(df2),
+    data.frame(x = 1:2, y = c(NA, NA))
+  )
+})
+
+test_that("unnest works correctly", {
+  df = pl$DataFrame(
+    a = 1:5,
+    b = c("one", "two", "three", "four", "five"),
+    c = 6:10
+  )$
+    select(
+      foo = pl$lit(1),
+      pl$struct("b"),
+      pl$struct(c("a", "c"))$alias("a_and_c")
+    )
+
+  expect_identical(
+    df$unnest("b", "a_and_c")$to_list(),
+    df$unnest(c("b", "a_and_c"))$to_list()
+  )
+
+  # old behavior still works
+  expect_identical(
+    df$unnest(c("b", "a_and_c"))$to_list(),
+    df$unnest(names = c("b", "a_and_c"))$to_list()
+  )
+
+  # wrong input
+  expect_grepl_error(
+    df$unnest("b", pl$col("a_and_c")),
+    "Input must be a character vector."
+  )
+  expect_grepl_error(
+    df$unnest(1),
+    "Input must be a character vector."
+  )
+
+  # wrong datatype
+  expect_grepl_error(
+    df$unnest("foo"),
+    "expected `Struct`, got `f64`"
+  )
+})
+
+
+make_cases = function() {
+  tibble::tribble(
+    ~.test_name, ~pola, ~base,
+    "max", "max", max,
+    "mean", "mean", mean,
+    "median", "median", median,
+    "max", "max", max,
+    "min", "min", min,
+    "std", "std", sd,
+    "sum", "sum", sum,
+    "var", "var", var,
+    "first", "first", function(x) head(x, 1),
+    "last", "last", function(x) tail(x, 1)
+  )
+}
+
+patrick::with_parameters_test_that(
+  "simple translations: eager",
+  {
+    a = as_polars_df(mtcars)[[pola]]()$to_data_frame()
+    b = data.frame(lapply(mtcars, base))
+    testthat::expect_equal(a, b, ignore_attr = TRUE)
+  },
+  .cases = make_cases()
+)
+
+test_that("simple translations", {
+  a = as_polars_df(mtcars)$var(10)$to_data_frame()
+  b = data.frame(lapply(mtcars, var))
+  expect_true(all(a != b))
+
+  a = as_polars_df(mtcars)$std(10)$to_data_frame()
+  b = data.frame(lapply(mtcars, sd))
+  expect_true(all(a != b))
+
+  a = as_polars_df(mtcars)$reverse()$to_data_frame()
+  b = mtcars[32:1, ]
+  expect_equal(a, b, ignore_attr = TRUE)
+
+  a = as_polars_df(mtcars)$slice(2, 4)$to_data_frame()
+  b = mtcars[3:6, ]
+  expect_equal(a, b, ignore_attr = TRUE)
+
+  a = as_polars_df(mtcars)$slice(30)$to_data_frame()
+  b = tail(mtcars, 2)
+  expect_equal(a, b, ignore_attr = TRUE)
+
+  a = as_polars_df(mtcars)$estimated_size()
+  expect_equal(a, 2816, tolerance = 0.1)
+
+  # trigger u8 conversion errors
+  expect_grepl_error(as_polars_df(mtcars)$std(256), c("ddof", "exceed the upper bound for u8 of 255"))
+  expect_grepl_error(
+    as_polars_df(mtcars)$var(-1),
+    c("ddof", "cannot be less than zero")
+  )
+})
+
+
+test_that("null_count 64bit", {
+  tmp = mtcars
+  tmp[1:2, 1:2] = NA
+  tmp[5, 3] = NA
+  a = as_polars_df(tmp)$null_count()$to_data_frame()
+  a = sapply(a, as.integer)
+  b = sapply(tmp, function(x) sum(is.na(x)))
+  expect_equal(a, b)
+
+  a = as_polars_df(tmp)$group_by("vs")$null_count()$to_data_frame()
+  expect_equal(dim(a), c(2, 11))
+})
+
+test_that("tail", {
+  a = as.data.frame(as_polars_df(mtcars)$tail(6))
+  b = tail(mtcars)
+  expect_equal(a, b, ignore_attr = TRUE)
+})
+
+test_that("drop_in_place", {
+  dat = as_polars_df(iris)
+  expect_true("Species" %in% dat$columns)
+  x = dat$drop_in_place("Species")
+  expect_false("Species" %in% dat$columns)
+  expect_s3_class(x, "RPolarsSeries")
+})
+
+
+test_that("shift", {
+  a = as_polars_df(mtcars[1:3, ])$shift(2)$to_data_frame()
+  for (i in seq_along(a)) {
+    expect_equal(is.na(a[[i]]), c(TRUE, TRUE, FALSE))
+  }
+  a = as_polars_df(mtcars[1:3, ])$shift(2, 0)$to_data_frame()
+  for (i in seq_along(a)) {
+    expect_equal(a[[i]], c(0, 0, mtcars[[i]][1]))
+  }
+})
+
+
+test_that("equals", {
+  dat1 = as_polars_df(iris)
+  dat2 = as_polars_df(mtcars)
+  expect_true(dat1$equals(dat1))
+  expect_false(dat1$equals(dat2))
+})
+
+test_that("fill_nan", {
+  a = pl$DataFrame(a = c(NaN, 1:2), b = c(1, NaN, NaN))
+  a = a$fill_nan(99)$to_data_frame()
+  expect_equal(sum(a[[1]] == 99), 1)
+  expect_equal(sum(a[[2]] == 99), 2)
+})
+
+test_that("quantile", {
+  a = as_polars_df(mtcars)$quantile(1, "midpoint")$to_data_frame()
+  b = as_polars_df(mtcars)$max()$to_data_frame()
+  expect_equal(a, b, ignore_attr = TRUE)
+
+  a = as_polars_df(mtcars)$quantile(0, "midpoint")$to_data_frame()
+  b = as_polars_df(mtcars)$min()$to_data_frame()
+  expect_equal(a, b, ignore_attr = TRUE)
+
+  a = as_polars_df(mtcars)$quantile(0.5, "midpoint")$to_data_frame()
+  b = as_polars_df(mtcars)$median()$to_data_frame()
+  expect_equal(a, b, ignore_attr = TRUE)
+})
+
+
+test_that("drop", {
+  a = as_polars_df(mtcars)$drop(c("mpg", "hp"))$columns
+  expect_false("hp" %in% a)
+  expect_false("mpg" %in% a)
+  a = as_polars_df(mtcars)$drop(c("mpg", "drat"), "hp")$columns
+  expect_false("hp" %in% a)
+  expect_false("mpg" %in% a)
+  expect_false("drat" %in% a)
+  a = as_polars_df(mtcars)$drop("mpg")$columns
+  expect_true("hp" %in% a)
+  expect_false("mpg" %in% a)
+
+  expect_identical(
+    as_polars_df(mtcars)$drop()$to_data_frame(),
+    mtcars,
+    ignore_attr = TRUE
+  )
+
+  # arg 'strict' works
+  expect_grepl_error(
+    as_polars_df(mtcars)$drop("a"),
+    r"("a" not found)"
+  )
+  expect_identical(
+    as_polars_df(mtcars)$drop("a", strict = FALSE)$to_data_frame(),
+    mtcars,
+    ignore_attr = TRUE
+  )
+})
+
+
+test_that("drop_nulls", {
+  tmp = mtcars
+  tmp[1:3, "mpg"] = NA
+  tmp = as_polars_df(tmp)
+  expect_equal(as_polars_df(mtcars)$drop_nulls()$height, 32, ignore_attr = TRUE)
+  expect_equal(as_polars_df(mtcars)$drop_nulls("mpg")$height, 32, ignore_attr = TRUE)
+  expect_equal(tmp$drop_nulls()$height, 29, ignore_attr = TRUE)
+  expect_equal(tmp$drop_nulls("mpg")$height, 29, ignore_attr = TRUE)
+  expect_equal(tmp$drop_nulls("hp")$height, 32, ignore_attr = TRUE)
+  expect_equal(tmp$drop_nulls(c("mpg", "hp"))$height, 29, ignore_attr = TRUE)
+
+  expect_grepl_error(
+    as_polars_df(mtcars)$drop_nulls("bad column name")$height,
+    "not found: unable to find column \"bad column name\""
+  )
+})
+
+
+test_that("fill_nulls", {
+  df = pl$DataFrame(
+    a = c(1.5, 2, NA, 4),
+    b = c(1.5, NA, NA, 4)
+  )$fill_null(99)$to_data_frame()
+  expect_equal(sum(df$a == 99), 1)
+  expect_equal(sum(df$b == 99), 2)
+})
+
+
+test_that("unique", {
+  df = pl$DataFrame(
+    x = as.numeric(c(1, 1:5)),
+    y = as.numeric(c(1, 1:5)),
+    z = as.numeric(c(1, 1, 1:4))
+  )
+  expect_equal(
+    df$unique()$to_list()$x |> sort(),
+    c(1, 2, 3, 4, 5)
+  )
+  expect_equal(
+    df$unique("z", keep = "first")$to_list()$x |> sort(),
+    c(1, 3, 4, 5)
+  )
+  expect_equal(
+    df$unique("z", keep = "last")$to_list()$x |> sort(),
+    c(2, 3, 4, 5)
+  )
+  expect_equal(
+    df$unique("z", keep = "none")$to_list()$x |> sort(),
+    c(3, 4, 5)
+  )
+})
+
+test_that("unique, maintain_order", {
+  df = pl$DataFrame(
+    x = rep(1:100, each = 2)
+  )
+  expect_equal(
+    df$unique(maintain_order = TRUE)$to_data_frame()$x,
+    1:100
+  )
+})
+
+test_that("as_data_frame (backward compatibility)", {
+  w = as.data.frame(as_polars_df(mtcars)$to_data_frame())
+  x = as.data.frame(as_polars_df(mtcars)$to_data_frame())
+  y = mtcars
+  expect_equal(w, x, ignore_attr = TRUE)
+  expect_equal(w, y, ignore_attr = TRUE)
+})
+
+
+test_that("sort", {
+  df = as_polars_df(mtcars)
+
+  w = df$sort("mpg", maintain_order = TRUE)$to_data_frame()
+  x = df$sort(pl$col("mpg"), maintain_order = TRUE)$to_data_frame()
+  y = mtcars[order(mtcars$mpg), ]
+  expect_equal(x, y, ignore_attr = TRUE)
+
+  w = df$sort(pl$col("cyl"), pl$col("mpg"), maintain_order = TRUE)$to_data_frame()
+  x = df$sort("cyl", "mpg", maintain_order = TRUE)$to_data_frame()
+  y = df$sort(c("cyl", "mpg"), maintain_order = TRUE)$to_data_frame()
+  z = mtcars[order(mtcars$cyl, mtcars$mpg), ]
+  expect_equal(w, x, ignore_attr = TRUE)
+  expect_equal(w, y, ignore_attr = TRUE)
+  expect_equal(w, z, ignore_attr = TRUE)
+
+  # expr: one increasing and one decreasing
+  x = df$sort(-pl$col("cyl"), pl$col("hp"), maintain_order = TRUE)$to_data_frame()
+  y = mtcars[order(-mtcars$cyl, mtcars$hp), ]
+  expect_equal(x, y, ignore_attr = TRUE)
+
+  # descending arg
+  w = df$sort("cyl", "mpg", descending = TRUE, maintain_order = TRUE)$to_data_frame()
+  x = df$sort(c("cyl", "mpg"), descending = TRUE, maintain_order = TRUE)$to_data_frame()
+  y = mtcars[order(-mtcars$cyl, -mtcars$mpg), ]
+  expect_equal(w, x, ignore_attr = TRUE)
+  expect_equal(w, y, ignore_attr = TRUE)
+
+  # descending arg: vector of boolean
+  w = df$sort("cyl", "mpg", descending = c(TRUE, FALSE), maintain_order = TRUE)$to_data_frame()
+  x = df$sort(c("cyl", "mpg"), descending = c(TRUE, FALSE), maintain_order = TRUE)$to_data_frame()
+  y = mtcars[order(-mtcars$cyl, mtcars$mpg), ]
+  expect_equal(w, x, ignore_attr = TRUE)
+  expect_equal(w, y, ignore_attr = TRUE)
+
+  # nulls_last
+  df = mtcars
+  df$mpg[1] = NA
+  df = as_polars_df(df)
+  a = df$sort("mpg", nulls_last = TRUE, maintain_order = TRUE)$to_data_frame()
+  b = df$sort("mpg", nulls_last = FALSE, maintain_order = TRUE)$to_data_frame()
+  expect_true(is.na(a$mpg[32]))
+  expect_true(is.na(b$mpg[1]))
+
+  # error if descending is NULL
+  expect_grepl_error(
+    df$sort("mpg", descending = NULL),
+    "must be of length 1 or of the same length as `by`"
+  )
+  expect_grepl_error(
+    df$sort(c("mpg", "drat"), descending = NULL),
+    "must be of length 1 or of the same length as `by`"
+  )
+})
+
+test_that("dtype_strings", {
+  df_1 = as_polars_df(data.frame(a = 1L, b = 1.0, c = "1", d = I(list(1))))
+  expect_equal(df_1$dtype_strings(), c("i32", "f64", "str", "list[f64]"))
+})
+
+
+test_that("join_asof_simple", {
+  l_gdp = list(
+    date = as.Date(c("2016-1-1", "2017-1-1", "2018-1-1", "2019-1-1")),
+    gdp = c(4164, 4411, 4566, 4696),
+    group_right = c("a", "a", "b", "b")
+  )
+  l_pop = list(
+    date = as.Date(c("2016-5-12", "2017-5-12", "2018-5-12", "2019-5-12")),
+    population = c(82.19, 82.66, 83.12, 83.52),
+    group = c("b", "b", "a", "a")
+  )
+
+  gdp = pl$DataFrame(l_gdp)$sort(list("date"))
+  pop = pl$DataFrame(l_pop)$sort("date")
+
+  # strategy param
+  expect_identical(
+    pop$join_asof(gdp, left_on = "date", right_on = "date", strategy = "backward")$to_list(),
+    c(l_pop, l_gdp[c("gdp", "group_right")])
+  )
+  expect_identical(
+    pop$join_asof(gdp, left_on = "date", right_on = "date", strategy = "forward")$to_list(),
+    c(l_pop, gdp$shift(-1)$to_list()[c("gdp", "group_right")])
+  )
+  expect_grepl_error(
+    pop$join_asof(gdp, left_on = "date", right_on = "date", strategy = "fruitcake"),
+    "must be one of 'forward' or 'backward'"
+  )
+
+  # shared left_right on
+  expect_identical(
+    pop$join_asof(gdp, on = "date", strategy = "backward")$to_list(),
+    c(l_pop, l_gdp[c("gdp", "group_right")])
+  )
+
+  # test by
+  expect_identical(
+    pop$join_asof(
+      gdp,
+      on = "date", by_left = "group",
+      by_right = "group_right", strategy = "backward"
+    )$to_list(),
+    c(l_pop, list(gdp = l_gdp$gdp[c(NA, NA, 2, 2)]))
+  )
+  expect_identical(
+    pop$join_asof(
+      gdp,
+      on = "date", by_left = "group",
+      by_right = "group_right", strategy = "forward"
+    )$to_list(),
+    c(l_pop, list(gdp = l_gdp$gdp[c(3, 3, NA, NA)]))
+  )
+
+
+  # str_tolerance within 19w
+  expect_identical(
+    pop$join_asof(gdp, on = "date", strategy = "backward", tolerance = "19w")$to_list(),
+    pop$join_asof(gdp, on = "date", strategy = "backward")$to_list()
+  )
+
+
+  # exceeding 18w
+  expect_identical(
+    pop$join_asof(gdp, on = "date", strategy = "backward", tolerance = "18w")$to_list(),
+    pop$join_asof(gdp, on = "date", strategy = "backward")$with_columns(
+      pl$lit(NA_real_)$alias("gdp"),
+      pl$lit(NA_character_)$alias("group_right")
+    )$to_list()
+  )
+
+  # num_tolerance within 19w = 19*7 days
+  expect_identical(
+    pop$join_asof(gdp, on = "date", strategy = "backward", tolerance = 19 * 7)$to_list(),
+    pop$join_asof(gdp, on = "date", strategy = "backward")$to_list()
+  )
+
+  expect_identical(
+    pop$join_asof(gdp, on = "date", strategy = "backward", tolerance = 18 * 7)$to_list(),
+    pop$join_asof(gdp, on = "date", strategy = "backward")$with_columns(
+      pl$lit(NA_real_)$alias("gdp"),
+      pl$lit(NA_character_)$alias("group_right")
+    )$to_list()
+  )
+
+  # arg coalesce works
+  expect_identical(
+    pop$join_asof(gdp, left_on = "date", right_on = "date", strategy = "backward", coalesce = FALSE)$to_list()[["date_right"]],
+    as.Date(c("2016-01-01", "2017-01-01", "2018-01-01", "2019-01-01"))
+  )
+})
+
+test_that("n_chunks", {
+  df = pl$concat(
+    1:10,
+    pl$concat(1:5, 1:5, rechunk = FALSE, how = "vertical")$rename("b"),
+    how = "horizontal"
+  )
+
+  expect_identical(df$n_chunks("all"), c(1, 2))
+  expect_identical(df$n_chunks(), 1)
+  expect_identical(pl$DataFrame()$n_chunks("all"), numeric())
+  expect_identical(pl$DataFrame()$n_chunks(), numeric())
+
+  expect_grepl_error(
+    pl$DataFrame()$n_chunks("wrong strat"),
+    "strategy not recognized"
+  )
+})
+
+
+test_that("pivot examples", {
+  df = pl$DataFrame(
+    foo = c("one", "one", "one", "two", "two", "two"),
+    bar = c("A", "B", "C", "A", "B", "C"),
+    baz = c(1, 2, 3, 4, 5, 6)
+  )
+
+  expect_identical(
+    df$pivot(
+      values = "baz", index = "foo", on = "bar", aggregate_function = "first"
+    )$to_list(),
+    list(foo = c("one", "two"), A = c(1, 4), B = c(2, 5), C = c(3, 6))
+  )
+
+
+  # Run an expression as aggregation function
+  df = pl$DataFrame(
+    col1 = c("a", "a", "a", "b", "b", "b"),
+    col2 = c("x", "x", "x", "x", "y", "y"),
+    col3 = c(6, 7, 3, 2, 5, 7)
+  )
+
+  expect_equal(
+    df$pivot(
+      index = "col1",
+      on = "col2",
+      values = "col3",
+      aggregate_function = pl$element()$tanh()$mean()
+    )$to_list(),
+    list(
+      col1 = c("a", "b"),
+      x = c(0.998346934093824, 0.964027580075817),
+      y = c(NA, 0.99995377060327)
+    )
+  )
+})
+
+
+test_that("pivot args works", {
+  df = pl$DataFrame(
+    foo = c("one", "one", "one", "two", "two", "two"),
+    bar = c("A", "B", "C", "A", "B", "C"),
+    baz = c(1, 2, 3, 4, 5, 6),
+    jaz = 6:1
+  )
+  expect_identical(
+    df$pivot("baz", index = "bar", values = "foo")$to_list(),
+    list(bar = c("A", "B", "C"), `1.0` = c("one", NA, NA), `2.0` = c(
+      NA,
+      "one", NA
+    ), `3.0` = c(NA, NA, "one"), `4.0` = c("two", NA, NA), `5.0` = c(NA, "two", NA), `6.0` = c(NA, NA, "two"))
+  )
+
+  df = pl$DataFrame(
+    ann = c("one", "one", "one", "two", "two", "two"),
+    bob = c("A", "B", "A", "B", "A", "B"),
+    cat = c(1, 2, 3, 4, 5, 6)
+  )
+
+  # aggr functions
+  expect_identical(
+    df$pivot("bob", index = "ann", values = "cat", aggregate_function = "mean")$to_list(),
+    list(ann = c("one", "two"), A = c(2, 5), B = c(2, 5))
+  )
+  expect_identical(
+    df$pivot("bob", index = "ann", values = "cat", aggregate_function = pl$element()$mean())$to_list(),
+    df$pivot("bob", index = "ann", values = "cat", aggregate_function = "mean")$to_list()
+  )
+  expect_grepl_error(
+    df$pivot("cat", index = "bob", values = "ann", aggregate_function = 42),
+    "is neither a string, NULL or an Expr"
+  )
+  expect_grepl_error(
+    df$pivot("cat", index = "bob", values = "ann", aggregate_function = "dummy"),
+    "dummy is not a method"
+  )
+
+  # maintain_order sort_columns
+  expect_grepl_error(
+    df$pivot("cat", index = "bob", values = "ann", aggregate_function = "mean", maintain_order = 42),
+    "Expected a value of type \\[bool\\]"
+  )
+  expect_grepl_error(
+    df$pivot("cat", index = "bob", values = "ann", aggregate_function = "mean", sort_columns = 42),
+    "Expected a value of type \\[bool\\]"
+  )
+
+  # separator
+  expect_named(
+    df$pivot("cat", index = "ann", values = c("ann", "bob"), aggregate_function = "mean", separator = "."),
+    c(
+      "ann", "ann.1.0", "ann.2.0", "ann.3.0", "ann.4.0",
+      "ann.5.0", "ann.6.0", "bob.1.0", "bob.2.0", "bob.3.0",
+      "bob.4.0", "bob.5.0", "bob.6.0"
+    )
+  )
+})
+
+test_that("rename", {
+  df = as_polars_df(mtcars)
+
+  # renaming succeeded
+  a = df$rename(mpg = "miles_per_gallon", hp = "horsepower")$columns
+  expect_false("hp" %in% a)
+  expect_false("mpg" %in% a)
+  expect_true("miles_per_gallon" %in% a)
+  expect_true("horsepower" %in% a)
+
+  # no args are not allowed
+  expect_grepl_error(
+    df$rename(),
+    "No arguments provided"
+  )
+
+  # wrapped args in list is equivalent
+  b = df$rename(list(mpg = "miles_per_gallon", hp = "horsepower"))$columns
+  expect_identical(a, b)
+})
+
+
+test_that("rename with a function", {
+  df = pl$DataFrame(
+    foo = 1:3,
+    bar = 6:8,
+    ham = letters[1:3]
+  )
+
+  expect_identical(
+  df$rename(
+    \(column_name) paste0("c", substr(column_name, 2, 100))
+  ) |>
+    names(),
+  c("coo", "car", "cam")
+  )
+
+  expect_grepl_error(df$rename(\(x) 1))
+})
+
+
+test_that("describe", {
+  df = pl$DataFrame(
+    string = c(letters[1:2], NA),
+    date = c(as.Date("2024-01-20"), as.Date("2024-01-21"), NA),
+    cat = factor(c("zz", "a", NA)),
+    bool = c(TRUE, FALSE, NA)
+  )
+  expect_snapshot(df$describe())
+  expect_snapshot(as_polars_df(mtcars)$describe())
+  expect_snapshot(as_polars_df(mtcars)$describe(interpolation = "linear"))
+  expect_grepl_error(as_polars_df(mtcars)$describe("not a percentile"))
+
+  # min/max different depending on categorical ordering
+  expect_snapshot(df$select(pl$col("cat")$cast(pl$Categorical("lexical")))$describe())
+
+  # perc = NULL  is the same as numeric()
+  expect_identical(
+    as_polars_df(mtcars)$describe(perc = numeric())$to_list(),
+    as_polars_df(mtcars)$describe(perc = NULL)$to_list()
+  )
+
+  # names using internal separator ":" in column names, should also just work.
+  df = pl$DataFrame("foo:bar:jazz" = 1, as_polars_series(2, name = ""), "foobar" = 3)
+  expect_identical(
+    df$describe()$columns,
+    c("statistic", df$columns)
+  )
+})
+
+test_that("$glimpse() works", {
+  df = as_polars_df(mtcars)$with_columns(pl$lit(42)$cast(pl$Int8))
+  expect_snapshot(df$glimpse())
+
+  expect_snapshot(df$glimpse(max_items_per_column = 2))
+
+  expect_snapshot(df$glimpse(max_colname_length = 2))
+
+  expect_grepl_error(
+    as_polars_df(iris)$glimpse(return_as_string = 42),
+    "must be `TRUE` or `FALSE`"
+  )
+  expect_type(as_polars_df(iris)$glimpse(return_as_string = TRUE), "character")
+})
+
+test_that("explode", {
+  df = pl$DataFrame(
+    letters = c("a", "a", "b", "c"),
+    numbers = list(1, c(2, 3), c(4, 5), c(6, 7, 8))
+  )
+  expect_equal(
+    df$explode("numbers")$to_data_frame(),
+    data.frame(
+      letters = c(rep("a", 3), "b", "b", rep("c", 3)),
+      numbers = 1:8
+    )
+  )
+
+  # empty values -> NA
+
+  df = pl$DataFrame(
+    letters = c("a", "a", "b", "c"),
+    numbers = list(1, NULL, c(4, 5), c(6, 7, 8))
+  )
+  expect_equal(
+    df$explode("numbers")$to_data_frame(),
+    data.frame(
+      letters = c(rep("a", 2), "b", "b", rep("c", 3)),
+      numbers = c(1, NA, 4:8)
+    )
+  )
+
+  # several cols to explode
+
+  df = pl$DataFrame(
+    letters = c("a", "a", "b", "c"),
+    numbers = list(1, NULL, c(4, 5), c(6, 7, 8)),
+    numbers2 = list(1, NULL, c(4, 5), c(6, 7, 8))
+  )
+  expect_equal(
+    df$explode("numbers", pl$col("numbers2"))$to_data_frame(),
+    data.frame(
+      letters = c(rep("a", 2), "b", "b", rep("c", 3)),
+      numbers = c(1, NA, 4:8),
+      numbers2 = c(1, NA, 4:8)
+    )
+  )
+})
+
+test_that("with_row_index", {
+  df = as_polars_df(mtcars)
+  expect_identical(
+    df$with_row_index("idx", 42)$select(pl$col("idx"))$to_data_frame()$idx,
+    as.double(42:(41 + nrow(mtcars)))
+  )
+})
+
+test_that("strictly_immutable = FALSE", {
+  # check dataframe is immutable by setting
+  df = as_polars_df(iris)
+  df_immutable_copy = df
+  df_immutable_copy$columns = paste0(df_immutable_copy$columns, "_modified")
+  expect_true(all(names(df) != names(df_immutable_copy)))
+
+  # setting and option returns the previous/state state as defualt
+  skip_if_not_installed("withr")
+  withr::with_options(
+    list(polars.strictly_immutable = FALSE),
+    {
+      # check change setting took effect
+      df = as_polars_df(iris)
+      df_mutable_copy = df
+      df_mutable_copy$columns = paste0(df_mutable_copy$columns, "_modified")
+      expect_true(all(names(df) == names(df_mutable_copy)))
+    }
+  )
+})
+
+test_that("sample", {
+  df = as_polars_df(iris)
+
+  # plain use
+  expect_identical(df$sample(n = 20)$height, 20)
+  expect_identical(df$sample(fraction = 0.1)$height, 15)
+  expect_grepl_error(
+    df$sample(fraction = 1.1),
+    "cannot take a larger sample than the total population when `with_replacement=false`"
+  )
+  expect_identical(df$sample(fraction = 1.1, with_replacement = TRUE)$height, 165)
+
+  # must pass either n or fraction and not both
+  expect_grepl_error(df$sample(), "Pass either arg")
+  expect_grepl_error(df$sample(n = 2, fraction = 0.1), "not both")
+
+  # single check of some conversion errors
+  ctx = df$sample(fraction = 0.1, seed = "not even a written number") |> get_err_ctx()
+  expect_identical(ctx$PlainErrorMessage, "ParseIntError { kind: InvalidDigit }")
+
+  # single check on rust-polars errors
+  ctx = df$sample(n = 151) |> get_err_ctx()
+  expect_true(isTRUE(grepl("larger sample than the total population", ctx$PolarsError)))
+  expect_no_error(df$sample(n = 151, with_replacement = TRUE))
+
+  # seed works
+  expect_identical(
+    df$sample(fraction = 0.1, seed = 123)$to_data_frame(),
+    df$sample(fraction = 0.1, seed = "123")$to_data_frame()
+  )
+})
+
+test_that("transpose", {
+  # R function to mimic polars transpose
+  R_t_df = \(df, include_header = FALSE, header_name = "column", column_names = NULL) {
+    tdf = as.data.frame(t(df))
+
+    if (include_header) {
+      header_name_df = data.frame(column = rownames(tdf))
+      colnames(header_name_df) = header_name
+      tdf = cbind(header_name_df, tdf)
+    }
+    rownames(tdf) = NULL
+    tdf
+  }
+
+
+  # include_header + custom header column name + column names
+  expect_identical(
+    as_polars_df(mtcars)$
+      transpose(include_header = TRUE, header_name = "alice", column_names = rownames(mtcars))$
+      to_data_frame(),
+    R_t_df(mtcars, include_header = TRUE, header_name = "alice")
+  )
+
+  # same but default column name
+  expect_identical(
+    as_polars_df(mtcars)$
+      transpose(include_header = TRUE, column_names = rownames(mtcars))$
+      to_data_frame(),
+    R_t_df(mtcars, include_header = TRUE)
+  )
+
+  # no heaser column
+  expect_identical(
+    as_polars_df(mtcars)$
+      transpose(include_header = FALSE, column_names = rownames(mtcars))$
+      to_data_frame(),
+    R_t_df(mtcars, include_header = FALSE)
+  )
+
+  # use default column names
+  df_expected = R_t_df(mtcars, include_header = FALSE)
+  colnames(df_expected) = paste0("column_", seq_len(ncol(df_expected)) - 1L)
+  expect_identical(
+    as_polars_df(mtcars)$
+      transpose(include_header = FALSE, column_names = NULL)$
+      to_data_frame(),
+    df_expected
+  )
+
+  # transpose mixed types with a shared super tpye
+  df_expected = R_t_df(iris, include_header = FALSE)
+  colnames(df_expected) = paste0("column_", seq_len(ncol(df_expected)) - 1L)
+  expect_identical(
+    as_polars_df(iris)$
+      with_columns(pl$col("Species")$
+      cast(pl$String))$
+      transpose(FALSE)$
+      to_data_frame(),
+    df_expected
+  )
+})
+
+test_that("drop_all_in_place", {
+  # this test verifies internal function in_place drop all Series in DataFrame
+  # will not affect a fully cloned DataFrame df_clone
+
+  df_copy = df = polars::as_polars_df(mtcars)
+  df_clone = df$clone()
+  s = df$get_column("cyl")
+  .pr$DataFrame$drop_all_in_place(df)
+  expect_identical(df$shape, c(0, 0))
+  expect_identical(df_copy$shape, c(0, 0))
+  expect_identical(df_clone$shape, c(32, 11))
+  expect_identical(s$len(), 32)
+})
+
+test_that("rolling for DataFrame: basic example", {
+  # this is just to ensure that the DataFrame method calls the lazy method
+  # under the hood. See the tests on lazy for more.
+  df = pl$DataFrame(
+    dt = c(
+      "2020-01-01", "2020-01-01", "2020-01-01",
+      "2020-01-02", "2020-01-03", "2020-01-08"
+    ),
+    a = c(3, 7, 5, 9, 2, 1)
+  )$with_columns(
+    pl$col("dt")$str$strptime(pl$Date, format = NULL)$set_sorted()
+  )
+
+  actual = df$rolling(index_column = "dt", period = "2d")$agg(
+    pl$sum("a")$alias("sum_a"),
+    pl$min("a")$alias("min_a"),
+    pl$max("a")$alias("max_a")
+  )$to_data_frame()
+
+  expect_equal(
+    actual[, c("sum_a", "min_a", "max_a")],
+    data.frame(
+      sum_a = c(15, 15, 15, 24, 11, 1),
+      min_a = c(3, 3, 3, 3, 2, 1),
+      max_a = c(7, 7, 7, 9, 9, 1)
+    )
+  )
+})
+
+test_that("rolling for DataFrame: using difftime as period", {
+  df = pl$DataFrame(
+    dt = c(
+      "2020-01-01", "2020-01-01", "2020-01-01",
+      "2020-01-02", "2020-01-03", "2020-01-08"
+    ),
+    a = c(3, 7, 5, 9, 2, 1)
+  )$with_columns(
+    pl$col("dt")$str$strptime(pl$Date, format = NULL)$set_sorted()
+  )
+
+  expect_equal(
+    df$rolling(index_column = "dt", period = "2d")$agg(
+      pl$sum("a")$alias("sum_a")
+    )$to_data_frame(),
+    df$rolling(index_column = "dt", period = as.difftime(2, units = "days"))$agg(
+      pl$sum("a")$alias("sum_a")
+    )$to_data_frame()
+  )
+})
+
+test_that("rolling for LazyFrame: error if period is negative", {
+  df = pl$LazyFrame(
+    index = c(1L, 2L, 3L, 4L, 8L, 9L),
+    a = c(3, 7, 5, 9, 2, 1)
+  )
+  expect_grepl_error(
+    df$rolling(index_column = "index", period = "-2i")$agg(pl$col("a"))$collect(),
+    "rolling window period should be strictly positive"
+  )
+})
+
+test_that("rolling for DataFrame: can be ungrouped", {
+  df = pl$DataFrame(
+    index = c(1:5, 6.0),
+    a = c(3, 7, 5, 9, 2, 1)
+  )$with_columns(pl$col("index")$set_sorted())
+
+  actual = df$rolling(index_column = "dt", period = "2i")$
+    ungroup()$
+    to_data_frame()
+  expect_equal(actual, df$to_data_frame())
+})
+
+test_that("flags work", {
+  df = pl$DataFrame(a = c(2, 1), b = c(3, 4), c = list(c(1, 2), 4))
+  expect_identical(
+    df$sort("a")$flags,
+    list(
+      a = list(SORTED_ASC = TRUE, SORTED_DESC = FALSE),
+      b = list(SORTED_ASC = FALSE, SORTED_DESC = FALSE),
+      c = list(SORTED_ASC = FALSE, SORTED_DESC = FALSE, FAST_EXPLODE = FALSE)
+    )
+  )
+  expect_identical(
+    df$with_columns(pl$col("b")$implode())$flags,
+    list(
+      a = list(SORTED_ASC = FALSE, SORTED_DESC = FALSE),
+      b = list(SORTED_ASC = FALSE, SORTED_DESC = FALSE, FAST_EXPLODE = TRUE),
+      c = list(SORTED_ASC = FALSE, SORTED_DESC = FALSE, FAST_EXPLODE = TRUE)
+    )
+  )
+
+  df = pl$DataFrame(
+    a = list(c(1, 2), c(4, 5)),
+    schema = list(a = pl$Array(pl$Float64, 2))
+  )
+  expect_identical(
+    df$flags,
+    list(
+      a = list(SORTED_ASC = FALSE, SORTED_DESC = FALSE, FAST_EXPLODE = FALSE)
+    )
+  )
+})
+
+test_that("partition_by", {
+  df = pl$DataFrame(
+    col1 = 1:5,
+    col2 = c("a", "a", "b", "b", "b"),
+    col3 = c(rep_len("c", 3), rep_len("d", 2))
+  )
+
+  # Test `maintain_order = TRUE`
+  expect_true(
+    df$equals(pl$concat(df$partition_by("col2")))
+  )
+  expect_true(
+    df$equals(pl$concat(df$partition_by("col2", "col3")))
+  )
+  expect_true(
+    df$drop("col3")$equals(pl$concat(df$partition_by("col3", include_key = FALSE)))
+  )
+
+  # Test `maintain_order = FALSE`
+  df_sorted = df$sort(pl$all())
+  expect_true(
+    df_sorted$equals(pl$concat(df$partition_by("col2", maintain_order = FALSE))$sort(pl$all()))
+  )
+  expect_true(
+    df_sorted$equals(pl$concat(df$partition_by("col2", "col3", maintain_order = FALSE))$sort(pl$all()))
+  )
+  expect_true(
+    df$drop("col3")$sort(pl$all())$equals(
+      pl$concat(df$partition_by("col3", include_key = FALSE, maintain_order = FALSE))$sort(pl$all())
+    )
+  )
+
+  # Test selecting columns by data type
+  expect_true(
+    mapply(
+      df$partition_by("col2", "col3"),
+      df$partition_by(pl$String),
+      FUN = \(x, y) x$equals(y)
+    ) |>
+      all()
+  )
+
+  # Test errors
+  expect_grepl_error(df$partition_by("foo"), "not found: foo")
+  expect_grepl_error(df$partition_by(pl$Int8), "There is no column to partition by")
+
+  # Test `as_nested_list = TRUE`
+  expect_true(
+    mapply(
+      df$partition_by("col2", "col3"),
+      df$partition_by("col2", "col3", as_nested_list = TRUE),
+      FUN = \(x, y) x$equals(y$data)
+    ) |>
+      all()
+  )
+  expect_true(
+    mapply(
+      df$partition_by("col2", "col3", include_key = FALSE),
+      df$partition_by("col2", "col3", as_nested_list = TRUE, include_key = FALSE),
+      FUN = \(x, y) x$equals(y$data)
+    ) |>
+      all()
+  )
+  expect_true(
+    df$partition_by("col2", "col3", as_nested_list = TRUE, include_key = FALSE) |>
+      lapply(\(x) x$data$with_columns(col2 = pl$lit(x$key$col2), col3 = pl$lit(x$key$col3))) |>
+      pl$concat() |>
+      df$equals()
+  )
+  expect_true(
+    df$partition_by("col2", "col3", as_nested_list = TRUE, maintain_order = FALSE) |>
+      lapply(\(x) x$data) |>
+      pl$concat() |>
+      (\(x) df$equals(x$sort(pl$all())))()
+  )
+
+  expect_warning(
+    df$partition_by("col2", maintain_order = FALSE, include_key = FALSE, as_nested_list = TRUE)
+  )
+})
+
+test_that("$item() works", {
+  df = pl$DataFrame(a = c(1, 2, 3), b = c(4, 5, 6))
+
+  expect_equal(df$select((pl$col("a") * pl$col("b"))$sum())$item(), 32)
+  expect_equal(df$item(1, 1), 5)
+  expect_equal(df$item(2, "b"), 6)
+
+  # errors
+
+  expect_grepl_error(
+    df$item(1, 4),
+    "`column` is out of bounds."
+  )
+  expect_grepl_error(
+    df$item(1, "foo"),
+    "`column` does not exist."
+  )
+  expect_grepl_error(
+    df$item(4, 1),
+    "`row` is out of bounds."
+  )
+  expect_grepl_error(
+    df$item(),
+    "if the DataFrame is of shape"
+  )
+  expect_grepl_error(
+    df$item(1),
+    " with only one of `row` or "
+  )
+  expect_grepl_error(
+    df$item(column = 1),
+    " with only one of `row` or "
+  )
+})
+
+test_that("$clear() works", {
+  df = pl$DataFrame(
+    a = c(NA, 2),
+    b = c("a", NA),
+    c = c(TRUE, TRUE)
+  )
+
+  expect_identical(
+    df$clear()$to_list(),
+    list(a = numeric(0), b = character(0), c = logical(0))
+  )
+
+  # n > number of rows
+  expect_identical(
+    df$clear(3)$to_list(),
+    list(a = rep(NA_real_, 3), b = rep(NA_character_, 3), c = rep(NA, 3))
+  )
+
+  # error
+  expect_grepl_error(
+    df$clear(-1),
+    "greater or equal to 0"
+  )
+  expect_grepl_error(
+    df$clear("a"),
+    "greater or equal to 0"
+  )
+  expect_grepl_error(
+    df$clear(0:1),
+    "greater or equal to 0"
+  )
+})
+
+test_that("$gather_every() works", {
+  df = pl$DataFrame(a = 1:4, b = 5:8)
+
+  expect_identical(
+    df$gather_every(2)$to_list(),
+    list(a = c(1L, 3L), b = c(5L, 7L))
+  )
+  expect_identical(
+    df$gather_every(2, offset = 1)$to_list(),
+    list(a = c(2L, 4L), b = c(6L, 8L))
+  )
+
+  # must specify n
+  expect_grepl_error(
+    df$gather_every(),
+    r"(argument "n" is missing)"
+  )
+
+  # offset must be positive
+  expect_grepl_error(
+    df$gather_every(2, offset = -1),
+    "cannot be less than zero"
+  )
+  expect_grepl_error(
+    df$gather_every(2, offset = "a"),
+    "Expected a value of type"
+  )
+})
+
+
+test_that("$cast() works", {
+  df = pl$DataFrame(
+    foo = 1:3,
+    bar = c(6, 7, 8),
+    ham = as.Date(c("2020-01-02", "2020-03-04", "2020-05-06"))
+  )
+
+  expect_identical(
+    df$cast(list(foo = pl$Float32, bar = pl$UInt8))$to_list(),
+    pl$DataFrame(
+      foo = 1:3,
+      bar = c(6, 7, 8),
+      ham = as.Date(c("2020-01-02", "2020-03-04", "2020-05-06")),
+      schema = list(foo = pl$Float32, bar = pl$UInt8, ham = pl$Date)
+    )$to_list()
+  )
+
+  expect_identical(
+    df$cast(pl$String)$to_list(),
+    pl$DataFrame(
+      foo = 1:3,
+      bar = c(6, 7, 8),
+      ham = as.Date(c("2020-01-02", "2020-03-04", "2020-05-06")),
+      schema = list(foo = pl$String, bar = pl$String, ham = pl$String)
+    )$to_list()
+  )
+
+  expect_identical(
+    df$cast(list())$to_list(),
+    df$to_list()
+  )
+
+  expect_grepl_error(df$cast(1))
+  expect_grepl_error(df$cast("a"))
+  expect_grepl_error(df$cast(list(foo = "a")))
+  expect_grepl_error(df$cast(list(), strict = 1))
+
+  # Test overflow error
+  df = pl$DataFrame(x = 1024)
+
+  expect_error(
+    df$cast(pl$Int8),
+    "conversion from `f64` to `i8` failed"
+  )
+  expect_identical(
+    df$cast(pl$Int8, strict = FALSE)$to_list(),
+    list(x = NA_integer_)
+  )
+})
+
+
+test_that("$to_dummies() works", {
+  df = pl$DataFrame(foo = 1:2, bar = 3:4, ham = c("a", "b"))
+
+  expect_identical(
+    df$to_dummies()$to_list(),
+    list(foo_1 = 1:0, foo_2 = 0:1, bar_3 = 1:0, bar_4 = 0:1, ham_a = 1:0, ham_b = 0:1)
+  )
+
+  expect_identical(
+    df$to_dummies(drop_first = TRUE)$to_list(),
+    list(foo_2 = 0:1, bar_4 = 0:1, ham_b = 0:1)
+  )
+
+  expect_identical(
+    df$to_dummies(c("foo", "bar"), separator = "::")$to_list(),
+    list(
+      `foo::1` = 1:0,
+      `foo::2` = 0:1,
+      `bar::3` = 1:0,
+      `bar::4` = 0:1,
+      ham = c("a", "b")
+    )
+  )
+})
+
+test_that("inequality joins work", {
+  east = pl$DataFrame(
+    id = c(100, 101, 102),
+    dur = c(120, 140, 160),
+    rev = c(12, 14, 16),
+    cores = c(2, 8, 4)
+  )
+  west = pl$DataFrame(
+    t_id = c(404, 498, 676, 742),
+    time = c(90, 130, 150, 170),
+    cost = c(9, 13, 15, 16),
+    cores = c(4, 2, 1, 4)
+  )
+  out = east$join_where(
+    west,
+    pl$col("dur") < pl$col("time"),
+    pl$col("rev") < pl$col("cost")
+  )
+
+  expect_identical(
+    out$to_data_frame(),
+    data.frame(
+      id = rep(c(100, 101), 3:2),
+      dur = rep(c(120, 140), 3:2),
+      rev = rep(c(12, 14), 3:2),
+      cores = rep(c(2, 8), 3:2),
+      t_id = c(498, 676, 742, 676, 742),
+      time = c(130, 150, 170, 150, 170),
+      cost = c(13, 15, 16, 15, 16),
+      cores_right = c(2, 1, 4, 1, 4)
+    )
+  )
+
+  expect_error(
+    east$join_where(
+      west$lazy(),
+      pl$col("dur") < pl$col("time"),
+      pl$col("rev") < pl$col("cost")
+    ),
+    "`other` must be a DataFrame"
+  )
+})
+
+test_that("inequality joins require suffix when identical column names", {
+  east = pl$DataFrame(
+    id = c(100, 101, 102),
+    dur = c(120, 140, 160),
+    rev = c(12, 14, 16),
+    cores = c(2, 8, 4)
+  )
+  west = pl$DataFrame(
+    t_id = c(404, 498, 676, 742),
+    dur = c(90, 130, 150, 170),
+    rev = c(9, 13, 15, 16),
+    cores = c(4, 2, 1, 4)
+  )
+  out = east$join_where(
+    west,
+    pl$col("dur") < pl$col("dur_right"),
+    pl$col("rev") < pl$col("rev_right")
+  )
+
+  expect_identical(
+    out$to_data_frame(),
+    data.frame(
+      id = rep(c(100, 101), 3:2),
+      dur = rep(c(120, 140), 3:2),
+      rev = rep(c(12, 14), 3:2),
+      cores = rep(c(2, 8), 3:2),
+      t_id = c(498, 676, 742, 676, 742),
+      dur_right = c(130, 150, 170, 150, 170),
+      rev_right = c(13, 15, 16, 15, 16),
+      cores_right = c(2, 1, 4, 1, 4)
+    )
+  )
+})

@@ -1,0 +1,31 @@
+version: 2
+updates:
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "ci: "
+
+  - package-ecosystem: "github-actions"
+    directory: ".github/actions/setup"
+    schedule:
+      interval: "daily"
+    commit-message:
+      prefix: "ci: "
+
+  - package-ecosystem: "cargo"
+    directory: "/src/rust"
+    schedule:
+      interval: weekly
+    commit-message:
+      prefix: "chore: "
+    groups:
+      patch:
+        update-types:
+          - patch
+
+  - package-ecosystem: "devcontainers"
+    directory: "/"
+    schedule:
+      interval: daily
