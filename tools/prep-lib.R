@@ -77,7 +77,7 @@ lib_version = read.dcf("DESCRIPTION", fields = sprintf("Config/%s/LibVersion", p
 lib_tag_prefix = "lib-v"
 
 target_url = sprintf(
-  "https://github.com/pola-rs/r-polars/releases/download/%s%s/libr_polars-%s-%s.tar.gz",
+  "https://github.com/rpolars/r-polars0/releases/download/%s%s/libr_polars-%s-%s.tar.gz",
   lib_tag_prefix,
   lib_version,
   lib_version,

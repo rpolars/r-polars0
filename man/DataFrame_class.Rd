@@ -23,13 +23,13 @@ methods as pure functions solved/simplified self-referential complications.
 }
 \details{
 Check out the source code in
-\href{https://github.com/pola-rs/r-polars/blob/main/R/dataframe__frame.R}{R/dataframe_frame.R}
+\href{https://github.com/rpolars/r-polars0/blob/main/R/dataframe__frame.R}{R/dataframe_frame.R}
 to see how public methods are derived from private methods. Check out
-\href{https://github.com/pola-rs/r-polars/blob/main/R/extendr-wrappers.R}{extendr-wrappers.R}
+\href{https://github.com/rpolars/r-polars0/blob/main/R/extendr-wrappers.R}{extendr-wrappers.R}
 to see the \code{extendr}-auto-generated methods. These are moved to \code{.pr} and
 converted into pure external functions in
-\href{https://github.com/pola-rs/r-polars/blob/main/R/after-wrappers.R}{after-wrappers.R}.
-In \href{https://github.com/pola-rs/r-polars/blob/main/R/zzz.R}{zzz.R} (named
+\href{https://github.com/rpolars/r-polars0/blob/main/R/after-wrappers.R}{after-wrappers.R}.
+In \href{https://github.com/rpolars/r-polars0/blob/main/R/zzz.R}{zzz.R} (named
 \code{zzz} to be last file sourced) the \code{extendr}-methods are removed and
 replaced by any function prefixed \code{DataFrame_}.
 }

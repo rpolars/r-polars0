@@ -101,13 +101,13 @@
 #' )
 #' ```
 #' @details Check out the source code in
-#' [R/dataframe_frame.R](https://github.com/pola-rs/r-polars/blob/main/R/dataframe__frame.R)
+#' [R/dataframe_frame.R](https://github.com/rpolars/r-polars0/blob/main/R/dataframe__frame.R)
 #' to see how public methods are derived from private methods. Check out
-#' [extendr-wrappers.R](https://github.com/pola-rs/r-polars/blob/main/R/extendr-wrappers.R)
+#' [extendr-wrappers.R](https://github.com/rpolars/r-polars0/blob/main/R/extendr-wrappers.R)
 #' to see the `extendr`-auto-generated methods. These are moved to `.pr` and
 #' converted into pure external functions in
-#' [after-wrappers.R](https://github.com/pola-rs/r-polars/blob/main/R/after-wrappers.R).
-#' In [zzz.R](https://github.com/pola-rs/r-polars/blob/main/R/zzz.R) (named
+#' [after-wrappers.R](https://github.com/rpolars/r-polars0/blob/main/R/after-wrappers.R).
+#' In [zzz.R](https://github.com/rpolars/r-polars0/blob/main/R/zzz.R) (named
 #' `zzz` to be last file sourced) the `extendr`-methods are removed and
 #' replaced by any function prefixed `DataFrame_`.
 #'
@@ -264,7 +264,7 @@ pl_DataFrame = function(..., make_names_unique = TRUE, schema = NULL) {
       " Use `as_polars_df()` instead."
     )
 
-    # TODO: schema v.s. schema_overrides <https://github.com/pola-rs/r-polars/issues/897>
+    # TODO: schema v.s. schema_overrides <https://github.com/rpolars/r-polars0/issues/897>
     out = as_polars_df(largs[[1]], make_names_unique = make_names_unique, schema_overrides = schema) |>
       result() |>
       uw()
