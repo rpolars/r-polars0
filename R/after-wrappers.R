@@ -114,7 +114,7 @@ extendr_method_to_pure_functions = function(env, class_name = NULL) {
 # allow that. Ok use :
 #  - internal documentation (noRd) to show case inner workings of code.
 #  - unit tests, which needs to verify an internal state.
-.pr$env = getNamespace("polars")
+.pr$env = getNamespace("polars0")
 .pr$print_env = print_env
 
 
@@ -287,7 +287,7 @@ pl_class_names = sort(
   )
 )
 
-pub_env = as.environment(asNamespace("polars"))
+pub_env = as.environment(asNamespace("polars0"))
 pub_class_env = as.environment(mget(pl_class_names, envir = pub_env))
 
 

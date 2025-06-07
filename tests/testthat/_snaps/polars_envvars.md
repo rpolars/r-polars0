@@ -25,7 +25,7 @@
       POLARS_VERBOSE                                                      0
       POLARS_WARN_UNSTABLE                                                0
       
-      See `?polars::polars_envvars` for the definition of all envvars.
+      See `?polars0::polars_envvars` for the definition of all envvars.
 
 # non-default value for each envvar: envvar=POLARS_FMT_MAX_COLS, value=1
 

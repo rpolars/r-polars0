@@ -4,10 +4,10 @@
 
 #
 # This file was created with the following call:
-#   .Call("wrap__make_polars_wrappers", use_symbols = TRUE, package_name = "polars")
+#   .Call("wrap__make_polars0_wrappers", use_symbols = TRUE, package_name = "polars0")
 
 #' @usage NULL
-#' @useDynLib polars, .registration = TRUE
+#' @useDynLib polars0, .registration = TRUE
 NULL
 
 polars_allocate_array_stream <- function() .Call(wrap__polars_allocate_array_stream)

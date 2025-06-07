@@ -14,12 +14,12 @@ knitr::opts_chunk$set(
 )
 
 rust_toolchain_version = read.dcf(
-  system.file("DESCRIPTION", package = "polars"),
-  fields = "Config/polars/RustToolchainVersion", all = TRUE
+  system.file("DESCRIPTION", package = "polars0"),
+  fields = "Config/polars0/RustToolchainVersion", all = TRUE
 )[1, 1]
 ```
 
-The `polars` package can be installed from R-universe or GitHub.
+The polars0 package can be installed from R-universe or GitHub.
 
 Some platforms can install pre-compiled binaries, and others will need to build from source.
 
@@ -31,63 +31,12 @@ Installing the latest release version.
 
 ```r
 Sys.setenv(NOT_CRAN = "true") # Enable installation with pre-built Rust library binary, or enable Rust caching
-install.packages("polars", repos = "https://community.r-multiverse.org")
+install.packages("polars0", repos = "https://rpolars.r-universe.dev")
 ```
 
 - On supported platforms, binary R package will be installed.
 - On the other platforms, the pre-built Rust library binary will be downloaded while building the R source package.
 - If the pre-built Rust library binary is not available, the Rust library will be built from source (provided that Rust is installed).
-
-### From GitHub releases
-
-Binary packages for the amd64 architecture are available.
-
-#### Linux (x86_64)
-
-```r
-install.packages(
-  "https://github.com/pola-rs/r-polars/releases/latest/download/polars__x86_64-pc-linux-gnu.gz",
-  repos = NULL
-)
-```
-
-#### Windows (x86_64)
-
-```r
-install.packages(
-  "https://github.com/pola-rs/r-polars/releases/latest/download/polars.zip",
-  repos = NULL
-)
-```
-
-#### macOS (x86_64, a.k.a. Intel)
-
-```r
-install.packages(
-  "https://github.com/pola-rs/r-polars/releases/latest/download/polars__x86_64-apple-darwin20.tgz",
-  repos = NULL
-)
-```
-
-#### macOS (aarch64, a.k.a. Apple Silicon)
-
-```r
-install.packages(
-  "https://github.com/pola-rs/r-polars/releases/latest/download/polars__aarch64-apple-darwin20.tgz",
-  repos = NULL
-)
-```
-
-### From GitHub commits
-
-Installing from GitHub commits or GitHub releases can be done using the `{remotes}` package's functions.
-
-For example, installing the version 0.9.0 from the GitHub release.
-
-```r
-Sys.setenv(NOT_CRAN = "true") # Enable installation with pre-built Rust library binary, or enable Rust caching
-remotes::install_github("pola-rs/r-polars@v0.9.0")
-```
 
 ## Details of installation
 
@@ -111,7 +60,7 @@ For example (on Bash):
 ```sh
 export LIBR_POLARS_BUILD="false"
 export LIBR_POLARS_PATH="/tmp/libr_polars.a"
-Rscript -e 'install.packages("polars", repos = "https://community.r-multiverse.org", type = "source")'
+Rscript -e 'install.packages("polars0", repos = "https://rpolars.r-universe.dev", type = "source")'
 ```
 
 ### Rust build time options
@@ -123,7 +72,7 @@ These flags are set at compile time, and cannot be changed at runtime.
 The features enabled in the compiled Rust library are shown by the `polars_info()` function.
 
 ```{r}
-library(polars)
+library(polars0)
 polars_info()
 ```
 

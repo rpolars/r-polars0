@@ -8,4 +8,4 @@
 
 library(testthat)
 
-test_check("polars")
+test_check("polars0")

@@ -229,7 +229,7 @@ fn test_robj_to_expr(robj: Robj) -> RResult<RPolarsExpr> {
 
 #[extendr]
 fn test_wrong_call_pl_lit(robj: Robj) -> RResult<Robj> {
-    Ok(R!("pl$lit({{robj}})")?) // this call should have been polars::pl$lit(...
+    Ok(R!("pl$lit({{robj}})")?) // this call should have been polars0::pl$lit(...
 }
 
 #[extendr]

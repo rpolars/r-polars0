@@ -230,7 +230,7 @@ native_completion = function(activate = TRUE) {
 # decide if some function/method recursively has the polars namespace as parent
 # environment.
 .rs_complete$is_polars_function = function(x, limit_search = 256) {
-  pl_env = asNamespace("polars")
+  pl_env = asNamespace("polars0")
   if (!is.function(x)) {
     return(FALSE)
   }
@@ -290,15 +290,15 @@ native_completion = function(activate = TRUE) {
       # function
       col_results = NULL
       if (isFALSE(object)) {
-        lhs = polars:::.rs_complete$eval_lhs_string(string, envir)
+        lhs = polars0:::.rs_complete$eval_lhs_string(string, envir)
         if (is.null(lhs)) {
           return(.rs.emptyCompletions())
         }
-        if (polars:::.rs_complete$is_polars_function(lhs)) {
+        if (polars0:::.rs_complete$is_polars_function(lhs)) {
           object = lhs
           object_self = environment(lhs)$self
 
-          if (polars:::.rs_complete$has_columns(object_self)) {
+          if (polars0:::.rs_complete$has_columns(object_self)) {
             col_results = .rs.makeCompletions(
               token = token,
               results = paste0("pl$col('", object_self$columns, "')"),
@@ -329,11 +329,11 @@ native_completion = function(activate = TRUE) {
     .rs.getCompletionsFunction_polars_orig = .rs.getCompletionsDollar
     .rs.getCompletionsDollar = function(token, string, functionCall, envir, isAt) {
       # perform evaluation of lhs
-      lhs = polars:::.rs_complete$eval_lhs_string(string, envir)
+      lhs = polars0:::.rs_complete$eval_lhs_string(string, envir)
       if (is.null(lhs)) {
         return(.rs.emptyCompletions())
       }
-      if (!polars:::.rs_complete$is_polars_related_type(lhs)) {
+      if (!polars0:::.rs_complete$is_polars_related_type(lhs)) {
         results = .rs.getCompletionsFunction_polars_orig(
           token, string, functionCall,
           envir = envir, isAt
@@ -366,7 +366,7 @@ native_completion = function(activate = TRUE) {
         token = token,
         results = results,
         excludeOtherCompletions = TRUE,
-        packages = "polars",
+        packages = "polars0",
         quote = FALSE,
         helpHandler = FALSE,
         context = .rs.acContextTypes$DOLLAR,

@@ -110,7 +110,7 @@ upgrade_err.default = function(err) {
 
 # call upgrade error from internalsnamespace
 # error_trait methods are internal and do not work correctly
-# when called directly by user e.g. polars:::upgrade_err(polars:::RPolarsErr$new())
+# when called directly by user e.g. polars0:::upgrade_err(polars0:::RPolarsErr$new())
 # calling R from rust via R! but it is  a "user" call in .GlobalEnv
 # by calling a package function the parent env is the internal pacakge env.
 upgrade_err_internal_ns = \(x) upgrade_err(x)

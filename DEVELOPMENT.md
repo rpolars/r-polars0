@@ -93,7 +93,7 @@ the following steps are required:
 
 1. Since the version of the Polars crate is specified by the Git revision,
   update the `rev` of all `polars-*` crates in the `src/rust/Cargo.toml` file.
-2. Update the `Config/polars/RustToolchainVersion` field in the `DESCRIPTION`
+2. Update the `Config/polars0/RustToolchainVersion` field in the `DESCRIPTION`
   file to the version of the Rust toolchain specified in the `toolchain.channel`
   field of the `rust-toolchain.toml` file in the Polars crate Git repository.
 3. Update the toolchain to the version specified in the `DESCRIPTION` file.
@@ -206,20 +206,4 @@ pl$DataFrame(iris)$select("Species")
 #> │ virginica │
 #> │ virginica │
 #> └───────────┘
-```
-
-## Other tips
-
-<!-- TODO: Clean up -->
-
-To speed up the local rextendr::document() or R CMD check, run the following:
-
-```r
-source("inst/misc/develop_polars.R")
-
-#to rextendr:document() + not_cran + load packages + all_features
-load_polars()
-
-#to check package + reuses previous compilation in check, protects against deletion
-check_polars() #assumes rust target at `paste0(getwd(),"/src/rust")`
 ```

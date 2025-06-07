@@ -106,7 +106,7 @@ we would have to scan it first with `pl$scan_csv()`:
 
 
 ```{r}
-library(polars)
+library(polars0)
 
 set.seed(123)
 df_test = pl$DataFrame(

@@ -158,7 +158,7 @@ impl RPolarsExpr {
                 }
 
                 _ if robj_inherits(&robj, ["RPolarsThen", "RPolarsChainedThen"]) => unpack_r_eval(
-                    R!("polars:::result({{robj}}$otherwise(polars::pl$lit(NULL)))"),
+                    R!("polars0:::result({{robj}}$otherwise(polars0::pl$lit(NULL)))"),
                 )
                 .and_then(r_expr_to_rust_expr)
                 .map(|expr| expr.0),

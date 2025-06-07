@@ -46,7 +46,7 @@ The current page works as a reference document, for side-by-side comparisons wit
 # Introduction
 
 ```{r}
-library(polars)
+library(polars0)
 ```
 
 # Getting started

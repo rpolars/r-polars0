@@ -62,15 +62,15 @@ test_that("Test sinking data to IPC file", {
 
   # from another process via rcall
   rdf_callr = callr::r(\(tmpf) {
-    polars::pl$scan_ipc(tmpf)$collect()$to_data_frame()
+    polars0::pl$scan_ipc(tmpf)$collect()$to_data_frame()
   }, args = list(tmpf = tmpf))
   expect_identical(rdf_callr, rdf)
 
 
   # from another process via rpool
   f_ipc_to_s = \(s) {
-    polars::pl$scan_ipc(s$to_r())$
-      select(polars::pl$struct(polars::pl$all()))$
+    polars0::pl$scan_ipc(s$to_r())$
+      select(polars0::pl$struct(polars0::pl$all()))$
       collect()$
       to_series()
   }
