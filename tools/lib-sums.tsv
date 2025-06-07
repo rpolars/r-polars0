@@ -1,0 +1,6 @@
+url	sha256sum
+https://github.com/rpolars/r-polars0/releases/download/lib-v0.45.3/libr_polars-0.45.3-aarch64-apple-darwin.tar.gz	2e37a09ce213b3149986629169c18dbaa3fea1e5b9c7f8b9931cdb15f78326fa
+https://github.com/rpolars/r-polars0/releases/download/lib-v0.45.3/libr_polars-0.45.3-aarch64-unknown-linux-gnu.tar.gz	1aeaa5190a8d2e12ab437858ffcc93c8c1ec40ae8e204142fb741fa13dee42a4
+https://github.com/rpolars/r-polars0/releases/download/lib-v0.45.3/libr_polars-0.45.3-x86_64-apple-darwin.tar.gz	f7db1f6271429fa31da8d238413354540363bdc9e827f517129933cdea69db78
+https://github.com/rpolars/r-polars0/releases/download/lib-v0.45.3/libr_polars-0.45.3-x86_64-pc-windows-gnu.tar.gz	cc6aed16de31ab3c966c363f8bff4eb2a8f72fc547803d521fa7832ee6ca9c63
+https://github.com/rpolars/r-polars0/releases/download/lib-v0.45.3/libr_polars-0.45.3-x86_64-unknown-linux-gnu.tar.gz	2ce09760654836c7e479c82c7a7575a56a2245145a9dfc0c6e568ecc18693d47
