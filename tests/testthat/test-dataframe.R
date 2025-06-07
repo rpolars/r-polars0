@@ -1389,7 +1389,7 @@ test_that("drop_all_in_place", {
   # this test verifies internal function in_place drop all Series in DataFrame
   # will not affect a fully cloned DataFrame df_clone
 
-  df_copy = df = polars::as_polars_df(mtcars)
+  df_copy = df = as_polars_df(mtcars)
   df_clone = df$clone()
   s = df$get_column("cyl")
   .pr$DataFrame$drop_all_in_place(df)

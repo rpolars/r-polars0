@@ -18,7 +18,7 @@ polars_info = function() {
   # Similar to arrow::arrow_info()
   out = list(
     versions = list(
-      r_package = as.character(utils::packageVersion("polars")),
+      r_package = as.character(utils::packageVersion("polars0")),
       rust_crate = rust_polars_version()
     ),
     thread_pool_size = thread_pool_size(),

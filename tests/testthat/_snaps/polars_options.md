@@ -24,5 +24,5 @@
     - strictly_immutable: input must be TRUE or FALSE.
     - debug_polars: input must be TRUE or FALSE.
     
-    More info at `?polars::polars_options`.
+    More info at `?polars0::polars_options`.
 

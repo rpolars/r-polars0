@@ -65,16 +65,17 @@ breaking changes at each version. Be sure to check the
 
 ## Install
 
-The recommended way to install this package is via R-multiverse:
+The recommended way to install this package is via R-universe rpolars
+repository.
 
 ``` r
 Sys.setenv(NOT_CRAN = "true")
-install.packages("polars", repos = "https://community.r-multiverse.org")
+install.packages("polars0", repos = "https://rpolars.r-universe.dev")
 ```
 
 [The “Install”
 vignette](https://pola-rs.github.io/r-polars/vignettes/install.html)
-(`vignette("install", "polars")`) gives more details on how to install
+(`vignette("install", "polars0")`) gives more details on how to install
 this package and other ways to install it.
 
 ## Quickstart example
@@ -88,7 +89,7 @@ For example, rewriting the Python example from
 <https://github.com/pola-rs/polars> in R:
 
 ``` r
-library(polars)
+library(polars0)
 
 df = pl$DataFrame(
   A = 1:5,
@@ -124,7 +125,7 @@ df$sort("fruits")$select(
 
 The [Get Started
 vignette](https://pola-rs.github.io/r-polars/vignettes/polars.html)
-(`vignette("polars")`) provides a more detailed introduction to
+(`vignette("polars0")`) provides a more detailed introduction to
 **polars**.
 
 ## Extensions

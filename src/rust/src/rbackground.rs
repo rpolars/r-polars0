@@ -256,7 +256,7 @@ impl RBackgroundHandler {
             .arg("-e")
             // Remove rextendr::document() if possible
             .arg(format!(
-                ".libPaths(c({libs}.libPaths())); polars:::handle_background_request(\"{server_name}\") |> invisible()"
+                ".libPaths(c({libs}.libPaths())); polars0:::handle_background_request(\"{server_name}\") |> invisible()"
             ))
             .stdin(Stdio::null())
             .stdout(Stdio::null())

@@ -1,6 +1,6 @@
-Package: polars
+Package: polars0
 Title: Lightning-Fast 'DataFrame' Library
-Version: 0.22.4.9000
+Version: 1.0.0
 Depends: R (>= 4.2)
 Imports: utils, codetools, methods
 Authors@R:
@@ -57,7 +57,7 @@ Config/Needs/dev:
     dplyr,
     RcppTOML,
     readr,
-    github::extendr/rextendr,
+    github::extendr/rextendr@v0.4.0,
     spelling,
     stringr,
     styler
@@ -118,7 +118,7 @@ Collate:
     'sql.R'
     'vctrs.R'
     'zzz.R'
-Config/rextendr/version: 0.4.0.9000
+Config/rextendr/version: 0.4.0
 VignetteBuilder: knitr
-Config/polars/LibVersion: 0.45.2
-Config/polars/RustToolchainVersion: nightly-2024-11-28
+Config/polars0/LibVersion: 0.45.3
+Config/polars0/RustToolchainVersion: nightly-2024-11-28

@@ -467,7 +467,7 @@ pub fn unpack_r_result_list(robj: extendr_api::Robj) -> RResult<Robj> {
 
     // 2 - try upgrade any Robj-error to an Robj-RPolarsErr (upgrade_err is an optional dependency-injection)
     let res = res.map_err(|err| {
-        R!("polars:::upgrade_err_internal_ns({{err}})")
+        R!("polars0:::upgrade_err_internal_ns({{err}})")
             .map_err(|err| format!("internal error while upgrade error: {}", err))
             .unwrap()
     });
@@ -792,7 +792,7 @@ fn internal_rust_wrap_e(robj: Robj, str_to_lit: bool) -> RResult<RPolarsExpr> {
 
     if !str_to_lit && robj.rtype() == Rtype::Strings {
         let expr: ExternalPtr<RPolarsExpr> =
-            (unpack_r_eval(R!("polars:::result(polars::pl$col({{robj}}))"))?).try_into()?;
+            (unpack_r_eval(R!("polars0:::result(polars0::pl$col({{robj}}))"))?).try_into()?;
         Ok(RPolarsExpr(expr.0.clone()))
     } else {
         RPolarsExpr::lit(robj)
@@ -806,7 +806,7 @@ pub fn robj_to_lazyframe(robj: extendr_api::Robj) -> RResult<RPolarsLazyFrame> {
     // closure to allow ?-convert extendr::Result to RResult
     let res = || -> RResult<RPolarsLazyFrame> {
         let lf: ExternalPtr<RPolarsLazyFrame> =
-            (unpack_r_eval(R!("polars:::result(polars::as_polars_lf({{robj}}))"))?).try_into()?;
+            (unpack_r_eval(R!("polars0:::result(polars0::as_polars_lf({{robj}}))"))?).try_into()?;
         Ok(RPolarsLazyFrame(lf.0.clone()))
     }();
 
@@ -820,7 +820,7 @@ pub fn robj_to_dataframe(robj: extendr_api::Robj) -> RResult<RPolarsDataFrame> {
     // closure to allow ?-convert extendr::Result to RResult
     let res = || -> RResult<RPolarsDataFrame> {
         let df: ExternalPtr<RPolarsDataFrame> =
-            (unpack_r_eval(R!("polars:::result(polars::as_polars_df({{robj}}))"))?).try_into()?;
+            (unpack_r_eval(R!("polars0:::result(polars0::as_polars_df({{robj}}))"))?).try_into()?;
         Ok(RPolarsDataFrame(df.0.clone()))
     }();
 

@@ -42,7 +42,7 @@ pub use crate::rbackground::RBGPOOL;
 // Macro to generate exports
 #[cfg(not(feature = "sql"))]
 extendr_module! {
-    mod polars;
+    mod polars0;
     use arrow_interop;
     use rlib;
     use concat;
@@ -57,7 +57,7 @@ extendr_module! {
 
 #[cfg(feature = "sql")]
 extendr_module! {
-    mod polars;
+    mod polars0;
     use arrow_interop;
     use rlib;
     use concat;

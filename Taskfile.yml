@@ -7,7 +7,7 @@ env:
   VIRTUAL_ENV: "{{.VENV_DIR}}"
 
 vars:
-  PACKAGE_NAME: polars
+  PACKAGE_NAME: polars0
   REQUIRE_R_PKGS: "arrow,nanoarrow,knitr"
   VENV_DIR: .venv_altdoc
   VENV_BIN:
@@ -44,7 +44,7 @@ tasks:
     desc: Install Rust tools for development.
     vars:
       RUST_TOOLCHAIN_VERSION:
-        sh: Rscript -e 'read.dcf("DESCRIPTION", fields = "Config/polars/RustToolchainVersion", all = TRUE)[1, 1] |> cat()'
+        sh: Rscript -e 'read.dcf("DESCRIPTION", fields = "Config/polars0/RustToolchainVersion", all = TRUE)[1, 1] |> cat()'
     cmds:
       - task: setup-rust-toolchain
       - task: setup-cargo-tools
@@ -53,7 +53,7 @@ tasks:
     desc: Install Rust toolchain.
     vars:
       RUST_TOOLCHAIN_VERSION:
-        sh: Rscript -e 'read.dcf("DESCRIPTION", fields = "Config/polars/RustToolchainVersion", all = TRUE)[1, 1] |> cat()'
+        sh: Rscript -e 'read.dcf("DESCRIPTION", fields = "Config/polars0/RustToolchainVersion", all = TRUE)[1, 1] |> cat()'
     cmds:
       - rustup toolchain install {{.RUST_TOOLCHAIN_VERSION}}{{if eq OS "windows"}}-gnu{{end}}
       - rustup default {{.RUST_TOOLCHAIN_VERSION}}{{if eq OS "windows"}}-gnu{{end}}

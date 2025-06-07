@@ -127,7 +127,7 @@ print.polars_envvars = function(x, ...) {
 
     cat(title, ":\n========", sep = "")
     print(df)
-    cat("\nSee `?polars::polars_envvars` for the definition of all envvars.")
+    cat("\nSee `?polars0::polars_envvars` for the definition of all envvars.")
   }
 
   print_key_values("Environment variables", unlist(x))
