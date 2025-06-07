@@ -207,19 +207,3 @@ pl$DataFrame(iris)$select("Species")
 #> │ virginica │
 #> └───────────┘
 ```
-
-## Other tips
-
-<!-- TODO: Clean up -->
-
-To speed up the local rextendr::document() or R CMD check, run the following:
-
-```r
-source("inst/misc/develop_polars.R")
-
-#to rextendr:document() + not_cran + load packages + all_features
-load_polars()
-
-#to check package + reuses previous compilation in check, protects against deletion
-check_polars() #assumes rust target at `paste0(getwd(),"/src/rust")`
-```
