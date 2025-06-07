@@ -26,6 +26,19 @@ knitr::opts_chunk$set(
 This package is a continuation of the Polars R package version 0,
 intended as a mitigation for the too many breaking changes from Polars R package version 0 to 1.
 
+We can trace the history of this package back to the original Polars R package,
+with the following steps:
+
+```sh
+git clone https://github.com/rpolars/r-polars0.git
+pushd r-polars0
+git remote add r-polars https://github.com/pola-rs/r-polars.git
+git fetch r-polars
+git replace 03f3f689df98788455d233806ab9a5e984bc35f2 a37bc3422d1a0d334b068cdf137b5ee77e210163
+```
+
+## Install
+
 ```r
 Sys.setenv(NOT_CRAN = "true")
 install.packages("polars0", repos = "https://rpolars.r-universe.dev")
