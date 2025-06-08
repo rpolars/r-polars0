@@ -43,7 +43,7 @@ print.polars_info = function(x, ...) {
     cat("\n")
   }
 
-  cat("Polars R package version : ", format(x$versions$r_package), "\n", sep = "")
+  cat("polars0 package version : ", format(x$versions$r_package), "\n", sep = "")
   cat("Rust Polars crate version: ", format(x$versions$rust_crate), "\n", sep = "")
   cat("\n")
   cat("Thread pool size:", x$thread_pool_size, "\n")
