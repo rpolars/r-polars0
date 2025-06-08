@@ -3,10 +3,13 @@
 ## polars0 1.0.0
 
 Initial release after renaming from polars to polars0.
+This package is intended to facilitate the transition from Polars R package version 0 to 1,
+and active maintenance is not planned.
 
-Just a package name change from polars to polars0 from polars package version 0.22.4.
+Just a package name change from polars to polars0 of the package version 0.22.4.
 
-Replace `polars` with `polars0` in your code as follows:
+To use this package instead of the polars package,
+please replace `polars` with `polars0` in your code as like:
 
 ```diff
 - library(polars)
