@@ -36,7 +36,7 @@ with the following steps:
 git clone https://github.com/rpolars/r-polars0.git
 pushd r-polars0
 git remote add r-polars https://github.com/pola-rs/r-polars.git
-git fetch r-polars
+git fetch r-polars v0
 git replace 03f3f689df98788455d233806ab9a5e984bc35f2 a37bc3422d1a0d334b068cdf137b5ee77e210163
 ```
 
