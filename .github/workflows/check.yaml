@@ -68,7 +68,7 @@ jobs:
       LIBR_POLARS_BUILD: "true"
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Set rust target
         id: rust-target
@@ -156,7 +156,7 @@ jobs:
       LIB_SUMS_PATH: "tools/lib-sums.tsv"
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
       - name: Check for pre-built binary
         run: |
